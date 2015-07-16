@@ -1,2 +1,14 @@
+lollore (gmail)
 User: admin
    Password: sveaeP8Q9BkT
+
+lolchat(icloud)
+User: admin
+   Password: dKznzx4C19GR
+Your application 'weblolchat2' is now available.
+  URL:        http://weblolchat2-weblolchat.rhcloud.com/
+  SSH to:     55a76430500446cdf4000097@weblolchat2-weblolchat.rhcloud.com
+  Git remote: ssh://55a76430500446cdf4000097@weblolchat2-weblolchat.rhcloud.com/~/git/weblolchat2.git/
+  Cloned to:  /Users/Patrick/PhpstormProjects/weblolchat2
+
+Run 'rhc show-app weblolchat2' for more details about your app.

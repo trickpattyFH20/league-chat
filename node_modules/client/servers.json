@@ -1,0 +1,58 @@
+{
+	"EUW": {
+		"caption": "EU West",
+		"url": "chat.euw1.lol.riotgames.com"
+	},
+	"EUNE": {
+		"caption": "EU Nordic & East",
+		"url": "chat.eun1.lol.riotgames.com"
+	},
+	"NA": {
+		"caption": "North America",
+		"url": "chat.na2.lol.riotgames.com"
+	},
+	"PBE": {
+		"caption": "Public Beta Environment",
+		"url": "chat.pbe1.lol.riotgames.com"
+	},
+	"OCE": {
+		"caption": "Oceania",
+		"url": "chat.oc1.lol.riotgames.com"
+	},
+	"BR": {
+		"caption": "Brazil",
+		"url": "chat.br.lol.riotgames.com"
+	},
+	"TR": {
+		"caption": "Turkey",
+		"url": "chat.tr.lol.riotgames.com"
+	},
+	"RU": {
+		"caption": "Russia",
+		"url": "chat.ru.lol.riotgames.com"
+	},
+	"LAN": {
+		"caption": "Latin America North",
+		"url": "chat.la1.lol.riotgames.com"
+	},
+	"LAS": {
+		"caption": "Latin America South",
+		"url": "chat.la2.lol.riotgames.com"
+	},
+	"TW": {
+		"caption": "Taiwan",
+		"url": "chattw.lol.garenanow.com"
+	},
+	"TH": {
+		"caption": "Thailand",
+		"url": "chatth.lol.garenanow.com"
+	},
+	"VN": {
+		"caption": "Vietnam",
+		"url": "chatvn.lol.garenanow.com"
+	},
+	"PH": {
+		"caption": "Phillipines",
+		"url": "chatph.lol.garenanow.com"
+	}
+}

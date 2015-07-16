@@ -46,7 +46,7 @@ app.service('socketService', function($http){
                 return io();
             }else{
                 console.log('live config', this.env)
-                return io("http://weblolchat-weblolchat.rhcloud.com:8000");
+                return io("http://weblolchat2-weblolchat.rhcloud.com:8000");
             }
             //console.log(this.getEnv().success(function(data){return data}))
         }

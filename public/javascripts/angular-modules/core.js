@@ -42,10 +42,10 @@ app.service('socketService', function($http){
         connection: function(env){
             console.log(env)
             if(env == '/Users/Patrick'){
-                console.log('dev config', this.env)
+                console.log('dev config', env)
                 return io();
             }else{
-                console.log('live config', this.env)
+                console.log('live config', env)
                 return io("http://weblolchat2-weblolchat.rhcloud.com:8000");
             }
             //console.log(this.getEnv().success(function(data){return data}))
@@ -64,10 +64,12 @@ app.factory('friendList', function(){
                 for(var i=0;i<svc.online.length;i++){
                     if(friend.name == svc.online[i].name){
                         found = true;
-                        break
+                        break;
                     }
                 }
                 if(found == false){
+                    friend.messages = [];
+                    friend.unread = 0;
                     svc.online.push(friend);
                 }
                 break;
@@ -85,6 +87,18 @@ app.factory('friendList', function(){
 
         }
     };
+    svc.newMessage = function(newMsg) {
+        var idEnd = newMsg.from.indexOf('@')
+        var thisId = newMsg.from.slice(3, idEnd);
+        for(var i=0;i<svc.online.length;i++){
+            jidEnd = svc.online[i].jid.indexOf('@')
+            thisJid = svc.online[i].jid.slice(3, jidEnd)
+            if(thisId == thisJid){
+                svc.online[i].messages.push(newMsg)
+                svc.online[i].undread = svc.online[i].unread++
+            }
+        }
+    }
 
     return svc;
 })
@@ -129,7 +143,7 @@ app.controller('loginCtrl',
                         $scope.$apply()
                     })
                     $scope.socket.on('message', function (message) {
-                        console.log(message)
+                        $rootScope.$broadcast('newmessage', message);
                         $scope.$apply()
                     })
                     $scope.socket.on('clienterror', function (msg) {
@@ -142,8 +156,12 @@ app.controller('loginCtrl',
 }]);
 
 app.controller('chatCtrl', ['$scope', '$rootScope', '$http', 'socketService', 'friendList', function($scope, $rootScope, $http, socketService, friendList){
-    $rootScope.$on('updateFriends', function(){
+    $scope.$on('updateFriends', function(){
         $scope.onlineFriends = friendList.online
+        $scope.$apply()
+    })
+    $scope.$on('newmessage', function(evt, message){
+        friendList.newMessage(message)
         $scope.$apply()
     })
 }]);

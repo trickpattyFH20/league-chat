@@ -157,6 +157,7 @@ var Client = require("client"),
     should = require("should")
 
 io.sockets.on('connection', function (socket) {
+  var client;
   socket.on('auth', function(data){
     (function login(){
       var credentials = {
@@ -168,8 +169,7 @@ io.sockets.on('connection', function (socket) {
               }
             ]
           },
-          userCredentials = credentials.accounts[0],
-          client;
+          userCredentials = credentials.accounts[0];
 
       console.log(userCredentials)
 
@@ -192,7 +192,7 @@ io.sockets.on('connection', function (socket) {
         socket.emit('updatefriend', friend);
       });
       client.on("message", function (message) {
-        console.log('presence update')
+        console.log('message received')
         socket.emit('message', message);
       });
       client.on("error", function(msg){
@@ -201,10 +201,17 @@ io.sockets.on('connection', function (socket) {
       })
     })();
   })
+  socket.on('sendMessage', function(data){
+    client.sendMessage(data.jid, data.message)
+  })
   socket.on('error', function(msg){
     console.log('error handler', msg)
     socket.emit('clienterror', msg)
   })
+  socket.on('disconnect', function() {
+    console.log('Got disconnect!');
+    client.disconnect()
+  });
 });
 
 module.exports = app;

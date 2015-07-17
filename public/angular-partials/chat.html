@@ -17,10 +17,10 @@
                     <div class="col-md-12">
                         <div ng-if="currentMessages" class="panel panel-info">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Chat With {{currentMessages[0].from}}</h3>
+                                <h3 class="panel-title">Chat With {{currentMessages.name}}</h3>
                             </div>
                             <div class="panel-body">
-                                <div ng-repeat="message in currentMessages">
+                                <div ng-repeat="message in currentMessages.messages" ng-class="{ 'mymsg': message.to, 'theirmsg': !message.to }">
                                     {{message.body}}
                                 </div>
                             </div>
@@ -28,9 +28,9 @@
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Enter Text Here...">
+                                            <input type="text" class="form-control" ng-model="formData.message" ng-enter="sendNew()" placeholder="Enter Text Here...">
                                             <span class="input-group-btn">
-                                                <button class="btn btn-info" type="button">SEND</button>
+                                                <button ng-click="sendNew()" class="btn btn-info" type="button">SEND</button>
                                             </span>
                                         </div>
                                     </div>

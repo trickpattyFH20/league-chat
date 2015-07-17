@@ -23,34 +23,37 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 });
 
 app.service('socketService', function($http){
-    return{
-        env: {'path': undefined},
-        getEnv: function(){
-            return $http({
-                method: 'GET',
-                url: '/service/devservice',
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
+    var svc = {}
+    svc.env = {'path': undefined},
+    svc.getEnv = function(){
+        return $http({
+            method: 'GET',
+            url: '/service/devservice',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
+        })
+            .success(function (data) {
+                //console.log('success')
             })
-                .success(function (data) {
-                    //console.log('success')
-                })
-                .error(function (data) {
-                    //console.log(data)
-                    console.log('error');
-                });
-        },
-        connection: function(env){
-            console.log(env)
-            if(env == '/Users/Patrick'){
-                console.log('dev config', env)
-                return io();
-            }else{
-                console.log('live config', env)
-                return io("http://weblolchat2-weblolchat.rhcloud.com:8000");
-            }
-            //console.log(this.getEnv().success(function(data){return data}))
+            .error(function (data) {
+                //console.log(data)
+                console.log('error');
+            });
+    },
+    svc.connection = function(env){
+        console.log(env)
+        if(env == '/Users/Patrick'){
+            console.log('dev config', env)
+            return io();
+        }else{
+            console.log('live config', env)
+            return io("http://weblolchat2-weblolchat.rhcloud.com:8000");
         }
+        //console.log(this.getEnv().success(function(data){return data}))
+    },
+    svc.currentConnection = function(){
+        return svc.connection;
     }
+    return svc;
 })
 
 app.factory('friendList', function(){
@@ -90,16 +93,29 @@ app.factory('friendList', function(){
 
         }
     };
-    svc.newMessage = function(newMsg) {
-        var idEnd = newMsg.from.indexOf('@')
-        var thisId = newMsg.from.slice(3, idEnd);
-        //TODO use shortId
-        for(var i=0;i<svc.online.length;i++){
-            jidEnd = svc.online[i].jid.indexOf('@')
-            thisJid = svc.online[i].jid.slice(3, jidEnd)
-            if(thisId == thisJid){
-                svc.online[i].messages.push(newMsg)
-                svc.online[i].undread = svc.online[i].unread++
+    svc.newMessage = function(newMsg, isCurrent) {
+        console.log(newMsg)
+        if(newMsg.from == 'self'){
+            for(var i=0;i<svc.online.length;i++){
+                thisJid = svc.online[i].shortId
+                if(newMsg.to == thisJid){
+                    svc.online[i].messages.push(newMsg)
+                    break
+                }
+            }
+        }else{
+            var idEnd = newMsg.from.indexOf('@')
+            var thisId = newMsg.from.slice(3, idEnd);
+            //TODO use shortId
+            for(var i=0;i<svc.online.length;i++){
+                thisJid = svc.online[i].shortId
+                if(thisId == thisJid){
+                    svc.online[i].messages.push(newMsg)
+                    if(isCurrent == false){
+                        svc.online[i].undread = svc.online[i].unread++
+                    }
+                    break
+                }
             }
         }
     }
@@ -115,7 +131,7 @@ app.controller('loginCtrl',
     ['$scope', '$rootScope', '$http', 'socketService', '$state', 'friendList',
         function ($scope, $rootScope, $http, socketService, $state, friendList) {
             socketService.getEnv().success(function (data) {
-                $scope.socket = socketService.connection(data.env)
+                $rootScope.socket = socketService.connection(data.env)
             })
             //for production pass in param to io("http://weblolchat-weblolchat.rhcloud.com:8000")
             $scope.formData = {};
@@ -143,7 +159,7 @@ app.controller('loginCtrl',
                     $scope.socket.on('updatefriend', function (friend) {
                         friendList.newPresence(friend)
                         console.log(friend)
-                        $rootScope.$broadcast('updateFriends');
+                        $rootScope.$broadcast('updateFriends', friend);
                         $scope.$apply()
                     })
                     $scope.socket.on('message', function (message) {
@@ -160,20 +176,68 @@ app.controller('loginCtrl',
 }]);
 
 app.controller('chatCtrl', ['$scope', '$rootScope', '$http', 'socketService', 'friendList', function($scope, $rootScope, $http, socketService, friendList){
-    $scope.$on('updateFriends', function(){
+    $scope.formData = {}
+    $scope.$on('updateFriends', function(evt, friend){
+        if(friend.online == false){
+            if($scope.currentMessages){
+                //TODO make this work with short id
+                if($scope.currentMessages.jid == friend.jid){
+                    $scope.currentMessages = undefined;
+                }
+            }
+        }
         $scope.onlineFriends = friendList.online
         $scope.$apply()
     })
     $scope.$on('newmessage', function(evt, message){
         //TODO do this to message counter : http://stackoverflow.com/questions/275931/how-do-you-make-an-element-flash-in-jquery
-        friendList.newMessage(message)
+        var isCurrent = false;
+        if($scope.currentMessages){
+            var idEnd = message.from.indexOf('@')
+            var thisId = message.from.slice(3, idEnd);
+            if($scope.currentMessages.shortId == thisId){
+                console.log('crrent message id is this message id')
+                isCurrent = true;
+            }
+        }
+        friendList.newMessage(message, isCurrent);
         $scope.$apply()
     })
     $scope.showMessages = function(shortId){
         for(var i=0;i<friendList.online.length;i++){
             if(shortId == friendList.online[i].shortId){
-                $scope.currentMessages = friendList.online[i].messages
+                friendList.online[i].unread = 0;
+                $scope.currentMessages = friendList.online[i]
             }
         }
     }
+    $scope.sendNew = function(){
+        console.log('send new function')
+        $scope.socket.emit('sendMessage', {'jid':$scope.currentMessages.jid, 'message':$scope.formData.message});
+        friendList.newMessage(
+            {
+                'to':angular.copy($scope.currentMessages.shortId),
+                'from':'self',
+                'body':angular.copy($scope.formData.message),
+                'date':new Date()
+            },
+            undefined);
+        $scope.formData.message = '';
+    }
 }]);
+
+app.directive('ngEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if(event.which === 13) {
+                event.preventDefault();
+                if(element[0]['value'] && element[0]['value']){
+                    scope.$apply(function (){
+                        scope.$eval(attrs.ngEnter);
+                    });
+                    event.preventDefault();
+                }
+            }
+        });
+    };
+});

@@ -317,12 +317,24 @@ body {
     margin-right: 0;
   }
 }
-
+.mymsg{
+  background-color:rgba(30,144,255, 0.4);
+  padding:15px;
+}
+.theirmsg{
+  background-color:rgba(255,215,0, 0.4);
+  padding:15px;
+}
 //change default styles
 .badge{
   background-color:#9954bb;
 }
 .panel{
+  &.panel-info{
+    & .panel-footer{
+      border-top:1px solid #7643a8;
+    }
+  }
   background-color:rgba(0, 0, 0, 0.6);
   color:#fff;
   & .panel-footer{

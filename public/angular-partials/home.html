@@ -16,17 +16,17 @@
             <div class="inner cover">
                 <h1 class="cover-heading">LOL Chat</h1>
                 <p class="lead"></p>
-                <div>
-                    <lable>Summoner Name</lable>
-                    <input type="text" ng-model="formData.username"/>
+                <div class="form-group">
+                    <lable class="control-label"><h4>Username</h4></lable>
+                    <input class="form-control" type="text" ng-enter="login()" ng-model="formData.username"/>
                 </div>
                 <div>
-                    <label>Password</label>
-                    <input type="password" ng-model="formData.password"/>
+                    <label class="control-label"><h4>Password</h4></label>
+                    <input class="form-control" type="password" ng-enter="login()" ng-model="formData.password"/>
                 </div>
-                <div>
-                    <label>Server</label>
-                    <select ng-model="formData.server">
+                <div class="form-group">
+                    <label class="control-label"><h4>Server</h4></label>
+                    <select class="form-control" ng-model="formData.server">
                         <option id="1" value="NA" ng-selcted="formData.server">North America</option>
                         <option id="2" value="LAN">Latin America</option>
                         <option id="3" value="EUW">Europe West</option>

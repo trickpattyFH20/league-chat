@@ -21,7 +21,7 @@
 10 error There is likely additional logging output above.
 11 error System Darwin 14.3.0
 12 error command "/Users/Patrick/.nvm/v0.10.39/bin/node" "/Users/Patrick/.nvm/v0.10.39/bin/npm" "start"
-13 error cwd /Users/Patrick/PhpstormProjects/weblolchat
+13 error cwd /Users/Patrick/PhpstormProjects/weblolchat2
 14 error node -v v0.10.39
 15 error npm -v 1.4.28
 16 error code ELIFECYCLE

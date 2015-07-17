@@ -210,7 +210,9 @@ io.sockets.on('connection', function (socket) {
   })
   socket.on('disconnect', function() {
     console.log('Got disconnect!');
-    client.disconnect()
+    if(typeof client != "undefined" && client != null){
+      client.disconnect()
+    }
   });
 });
 

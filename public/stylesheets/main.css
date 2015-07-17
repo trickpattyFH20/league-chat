@@ -1,11 +1,15 @@
 /*
  * Globals
  */
+.pointer {
+  cursor: pointer;
+}
 /* Links */
 a,
 a:focus,
 a:hover {
   color: #fff;
+  cursor: pointer;
 }
 /* Custom default button */
 .btn-default,

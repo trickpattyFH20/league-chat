@@ -1,5 +1,5 @@
 //init app
-var app = angular.module('myApp', ['ui.router', 'ngAnimate', 'ui.bootstrap']);
+var app = angular.module('myApp', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'ngTouch']);
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     //
@@ -128,8 +128,8 @@ app.controller('mainCtrl', ['$scope', '$http', 'socketService', function($scope,
 }]);
 
 app.controller('loginCtrl',
-    ['$scope', '$rootScope', '$http', 'socketService', '$state', 'friendList',
-        function ($scope, $rootScope, $http, socketService, $state, friendList) {
+    ['$scope', '$rootScope', '$timeout', '$http', 'socketService', '$state', 'friendList',
+        function ($scope, $rootScope, $timeout, $http, socketService, $state, friendList) {
             socketService.getEnv().success(function (data) {
                 $rootScope.socket = socketService.connection(data.env)
             })
@@ -153,14 +153,18 @@ app.controller('loginCtrl',
                         $scope.$apply()
                     })
                     $scope.socket.on('roster', function (list) {
-                        $scope.friends = list;
-                        $scope.$apply()
+                        //$scope.friends = list;
+                        //$scope.$apply()
                     })
                     $scope.socket.on('updatefriend', function (friend) {
-                        friendList.newPresence(friend)
-                        console.log(friend)
-                        $rootScope.$broadcast('updateFriends', friend);
-                        $scope.$apply()
+                        //TODO remove timeout and rework:
+                        // if logging in, use a callback so friends show after chat partial
+                        $timeout(function(){
+                            friendList.newPresence(friend)
+                            $rootScope.$broadcast('updateFriends', friend);
+                            console.log(friend)
+                            $scope.$apply()
+                        }, 5000);
                     })
                     $scope.socket.on('message', function (message) {
                         $rootScope.$broadcast('newmessage', message);

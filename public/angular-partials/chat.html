@@ -3,7 +3,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand"><a href="#">Friends</a></li>
             {{dicks}}
-            <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends">
+            <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends track by $index">
                 <a>{{friend.name}}
                     <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
                 </a>
@@ -20,7 +20,7 @@
                                 <h3 class="panel-title">Chat With {{currentMessages.name}}</h3>
                             </div>
                             <div class="panel-body">
-                                <div ng-repeat="message in currentMessages.messages" ng-class="{ 'mymsg': message.to, 'theirmsg': !message.to }">
+                                <div ng-repeat="message in currentMessages.messages track by $index" ng-class="{ 'mymsg': message.to, 'theirmsg': !message.to }">
                                     {{message.body}}
                                 </div>
                             </div>

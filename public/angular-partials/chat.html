@@ -3,7 +3,11 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand"><a href="#">Friends</a></li>
             {{dicks}}
-            <li ng-repeat="friend in onlineFriends"><a href="">{{friend.name}} <span ng-if="friend.unread != 0">{{friend.unread}}</span></a></li>
+            <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends">
+                <a>{{friend.name}}
+                    <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                </a>
+            </li>
         </ul>
     </div>
     <div id="page-content-wrapper">
@@ -11,7 +15,28 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-
+                        <div ng-if="currentMessages" class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Chat With {{currentMessages[0].from}}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div ng-repeat="message in currentMessages">
+                                    {{message.body}}
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Enter Text Here...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-info" type="button">SEND</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

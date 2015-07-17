@@ -70,6 +70,9 @@ app.factory('friendList', function(){
                 if(found == false){
                     friend.messages = [];
                     friend.unread = 0;
+                    jidEnd = friend.jid.indexOf('@')
+                    shortId = friend.jid.slice(3, jidEnd)
+                    friend.shortId = shortId
                     svc.online.push(friend);
                 }
                 break;
@@ -90,6 +93,7 @@ app.factory('friendList', function(){
     svc.newMessage = function(newMsg) {
         var idEnd = newMsg.from.indexOf('@')
         var thisId = newMsg.from.slice(3, idEnd);
+        //TODO use shortId
         for(var i=0;i<svc.online.length;i++){
             jidEnd = svc.online[i].jid.indexOf('@')
             thisJid = svc.online[i].jid.slice(3, jidEnd)
@@ -161,7 +165,15 @@ app.controller('chatCtrl', ['$scope', '$rootScope', '$http', 'socketService', 'f
         $scope.$apply()
     })
     $scope.$on('newmessage', function(evt, message){
+        //TODO do this to message counter : http://stackoverflow.com/questions/275931/how-do-you-make-an-element-flash-in-jquery
         friendList.newMessage(message)
         $scope.$apply()
     })
+    $scope.showMessages = function(shortId){
+        for(var i=0;i<friendList.online.length;i++){
+            if(shortId == friendList.online[i].shortId){
+                $scope.currentMessages = friendList.online[i].messages
+            }
+        }
+    }
 }]);

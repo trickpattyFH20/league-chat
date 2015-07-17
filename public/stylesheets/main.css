@@ -30,7 +30,6 @@ body {
   background-repeat: no-repeat;
 }
 body {
-  color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -52,6 +51,7 @@ body {
   vertical-align: top;
 }
 .cover-container {
+  color: #fff;
   margin-right: auto;
   margin-left: auto;
   background-color: rgba(0, 0, 0, 0.6);
@@ -236,7 +236,6 @@ body {
   list-style: none;
 }
 .sidebar-nav li {
-  text-indent: 20px;
   line-height: 40px;
 }
 .sidebar-nav li a {
@@ -245,6 +244,7 @@ body {
   color: #999999;
 }
 .sidebar-nav li a:hover {
+  cursor: pointer;
   text-decoration: none;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
@@ -286,4 +286,14 @@ body {
     position: relative;
     margin-right: 0;
   }
+}
+.badge {
+  background-color: #9954bb;
+}
+.panel {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+.panel .panel-footer {
+  background-color: rgba(0, 0, 0, 0.6);
 }

@@ -1,5 +1,6 @@
 /*
  * Globals
+ *
  */
 .pointer {
   cursor: pointer;
@@ -222,13 +223,11 @@ body {
   width: 250px;
 }
 #page-content-wrapper {
-  width: 100%;
   position: absolute;
   padding: 15px;
 }
 #wrapper.toggled #page-content-wrapper {
   position: absolute;
-  margin-right: -250px;
 }
 /* Sidebar Styles */
 .sidebar-nav {
@@ -269,28 +268,33 @@ body {
   color: #fff;
   background: none;
 }
-@media (min-width: 768px) {
+/*@media(min-width:768px) {
   #wrapper {
     padding-left: 250px;
   }
+
   #wrapper.toggled {
     padding-left: 0;
   }
+
   #sidebar-wrapper {
     width: 250px;
   }
+
   #wrapper.toggled #sidebar-wrapper {
     width: 0;
   }
+
   #page-content-wrapper {
     padding: 20px;
     position: relative;
   }
+
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
   }
-}
+}*/
 .mymsg {
   background-color: rgba(30, 144, 255, 0.4);
   padding: 15px;

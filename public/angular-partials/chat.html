@@ -1,4 +1,4 @@
-<div id="wrapper">
+<div id="wrapper" ng-class="{'toggled':!showMsg}">
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand"><a href="#">Friends</a></li>
@@ -15,8 +15,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div ng-if="currentMessages" class="panel panel-info">
+                        <div ng-show="showMsg" ng-if="currentMessages" class="panel panel-info">
                             <div class="panel-heading">
+                                <a ng-click="showSide()">
+                                    <span ng-click="showList()" class="glyphicon glyphicon-triangle-left pull-left" aria-hidden="true"></span>
+                                </a>
                                 <h3 class="panel-title">Chat With {{currentMessages.name}}</h3>
                             </div>
                             <div class="panel-body">

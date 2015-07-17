@@ -181,6 +181,8 @@ app.controller('loginCtrl',
 
 app.controller('chatCtrl', ['$scope', '$rootScope', '$http', 'socketService', 'friendList', function($scope, $rootScope, $http, socketService, friendList){
     $scope.formData = {}
+    $scope.showMsg = false;
+
     $scope.$on('updateFriends', function(evt, friend){
         if(friend.online == false){
             if($scope.currentMessages){
@@ -208,6 +210,7 @@ app.controller('chatCtrl', ['$scope', '$rootScope', '$http', 'socketService', 'f
         $scope.$apply()
     })
     $scope.showMessages = function(shortId){
+        $scope.showMsg = true
         for(var i=0;i<friendList.online.length;i++){
             if(shortId == friendList.online[i].shortId){
                 friendList.online[i].unread = 0;
@@ -227,6 +230,9 @@ app.controller('chatCtrl', ['$scope', '$rootScope', '$http', 'socketService', 'f
             },
             undefined);
         $scope.formData.message = '';
+    }
+    $scope.showSide = function(){
+        $scope.showMsg = false;
     }
 }]);
 

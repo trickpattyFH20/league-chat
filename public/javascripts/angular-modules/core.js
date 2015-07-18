@@ -172,7 +172,6 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             })
             $scope.socket.on('updatefriend', function (friend) {
                 //TODO remove timeout and rework:
-
                 if(friend.online == false){
                     if($scope.currentMessages){
                         //TODO make this work with short id

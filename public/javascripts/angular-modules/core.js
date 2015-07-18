@@ -25,6 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 app.service('socketService', function($http){
     var svc = {}
     svc.env = {'path': undefined},
+    svc.creds = {},
     svc.getEnv = function(){
         return $http({
             method: 'GET',
@@ -130,85 +131,85 @@ app.controller('mainCtrl', ['$scope', '$http', 'socketService', function($scope,
 app.controller('loginCtrl',
     ['$scope', '$rootScope', '$timeout', '$http', 'socketService', '$state', 'friendList',
         function ($scope, $rootScope, $timeout, $http, socketService, $state, friendList) {
-            socketService.getEnv().success(function (data) {
-                $rootScope.socket = socketService.connection(data.env)
-            })
-            //for production pass in param to io("http://weblolchat-weblolchat.rhcloud.com:8000")
+
             $scope.formData = {};
             $scope.formData.server = 'NA';
 
             $scope.login = function () {
                 console.log('in login func')
-                $scope.socket.emit('auth', $scope.formData);
+                socketService.creds = $scope.formData;
+                $state.go('chat')
             }
-
-            $rootScope.onlineFriends = []
-
-            $scope.$watch('socket', function (ov, nv) {
-                console.log($scope.socket)
-                if ($scope.socket) {
-                    $scope.socket.on('online', function () {
-                        console.log('online clientside event')
-                        $state.go('chat')
-                        $scope.$apply()
-                    })
-                    $scope.socket.on('roster', function (list) {
-                        //$scope.friends = list;
-                        //$scope.$apply()
-                    })
-                    $scope.socket.on('updatefriend', function (friend) {
-                        //TODO remove timeout and rework:
-                        // if logging in, use a callback so friends show after chat partial
-                        $timeout(function(){
-                            friendList.newPresence(friend)
-                            $rootScope.$broadcast('updateFriends', friend);
-                            console.log(friend)
-                            $scope.$apply()
-                        }, 5000);
-                    })
-                    $scope.socket.on('message', function (message) {
-                        $rootScope.$broadcast('newmessage', message);
-                        $scope.$apply()
-                    })
-                    $scope.socket.on('clienterror', function (msg) {
-                        console.log('caught it')
-                        console.log(msg)
-                        $scope.$apply()
-                    })
-                }
-            })
 }]);
 
-app.controller('chatCtrl', ['$scope', '$rootScope', '$http', 'socketService', 'friendList', function($scope, $rootScope, $http, socketService, friendList){
-    $scope.formData = {}
+app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', function($scope, $state, $http, socketService, friendList){
+    $scope.formData = {};
     $scope.showMsg = false;
 
-    $scope.$on('updateFriends', function(evt, friend){
-        if(friend.online == false){
-            if($scope.currentMessages){
-                //TODO make this work with short id
-                if($scope.currentMessages.jid == friend.jid){
-                    $scope.currentMessages = undefined;
+    if(!socketService.creds.username){
+        $state.go('home')
+    }
+
+    socketService.getEnv().success(function (data) {
+        console.log(data)
+        $scope.socket = socketService.connection(data.env)
+        $scope.socket.emit('auth', socketService.creds);
+    })
+    //for production pass in param to io("http://weblolchat-weblolchat.rhcloud.com:8000")
+
+    $scope.onlineFriends = []
+
+    $scope.$watch('socket', function (ov, nv) {
+        console.log($scope.socket)
+        if ($scope.socket) {
+            $scope.socket.on('online', function () {
+                console.log('online clientside event')
+                $scope.$apply()
+            })
+            $scope.socket.on('roster', function (list) {
+                //$scope.friends = list;
+                //$scope.$apply()
+            })
+            $scope.socket.on('updatefriend', function (friend) {
+                //TODO remove timeout and rework:
+
+                if(friend.online == false){
+                    if($scope.currentMessages){
+                        //TODO make this work with short id
+                        if($scope.currentMessages.jid == friend.jid){
+                            $scope.currentMessages = undefined;
+                            $scope.showMsg = false;
+                        }
+                    }
                 }
-            }
+                friendList.newPresence(friend)
+                $scope.onlineFriends = friendList.online
+                $scope.$apply()
+
+            })
+            $scope.socket.on('message', function (message) {
+                //TODO do this to message counter : http://stackoverflow.com/questions/275931/how-do-you-make-an-element-flash-in-jquery
+                var isCurrent = false;
+                if($scope.currentMessages){
+                    var idEnd = message.from.indexOf('@')
+                    var thisId = message.from.slice(3, idEnd);
+                    if($scope.currentMessages.shortId == thisId){
+                        console.log('crrent message id is this message id')
+                        isCurrent = true;
+                    }
+                }
+                friendList.newMessage(message, isCurrent);
+                $scope.$apply()
+            })
+            $scope.socket.on('clienterror', function (msg) {
+                console.log('caught it')
+                console.log(msg)
+                $scope.$apply()
+            })
         }
-        $scope.onlineFriends = friendList.online
-        $scope.$apply()
     })
-    $scope.$on('newmessage', function(evt, message){
-        //TODO do this to message counter : http://stackoverflow.com/questions/275931/how-do-you-make-an-element-flash-in-jquery
-        var isCurrent = false;
-        if($scope.currentMessages){
-            var idEnd = message.from.indexOf('@')
-            var thisId = message.from.slice(3, idEnd);
-            if($scope.currentMessages.shortId == thisId){
-                console.log('crrent message id is this message id')
-                isCurrent = true;
-            }
-        }
-        friendList.newMessage(message, isCurrent);
-        $scope.$apply()
-    })
+
+    //old ctrl
     $scope.showMessages = function(shortId){
         $scope.showMsg = true
         for(var i=0;i<friendList.online.length;i++){

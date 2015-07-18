@@ -268,33 +268,12 @@ body {
   color: #fff;
   background: none;
 }
-/*@media(min-width:768px) {
-  #wrapper {
-    padding-left: 250px;
+@media (max-width: 600px) {
+  #wrapper.toggled #sidebar-wrapper,
+  .sidebar-nav {
+    width: 100%;
   }
-
-  #wrapper.toggled {
-    padding-left: 0;
-  }
-
-  #sidebar-wrapper {
-    width: 250px;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    width: 0;
-  }
-
-  #page-content-wrapper {
-    padding: 20px;
-    position: relative;
-  }
-
-  #wrapper.toggled #page-content-wrapper {
-    position: relative;
-    margin-right: 0;
-  }
-}*/
+}
 .mymsg {
   background-color: rgba(30, 144, 255, 0.4);
   padding: 15px;

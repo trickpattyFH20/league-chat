@@ -147,6 +147,11 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     $scope.formData = {};
     $scope.showMsg = false;
 
+    window.addEventListener('pageshow', function(){
+        $scope.pageshow = 'page shown';
+        $scope.$apply()
+    })
+
     if(!socketService.creds.username){
         $state.go('home')
     }

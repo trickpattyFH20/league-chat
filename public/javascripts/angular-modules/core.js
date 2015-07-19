@@ -147,9 +147,8 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     $scope.formData = {};
     $scope.showMsg = false;
 
-    window.addEventListener('pageshow', function(){
-        $scope.pageshow = 'page shown';
-        $scope.$apply()
+    window.addEventListener('activate', function(){
+        alert('tab activated')
     })
 
     if(!socketService.creds.username){

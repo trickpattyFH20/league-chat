@@ -171,8 +171,6 @@ io.sockets.on('connection', function (socket) {
           },
           userCredentials = credentials.accounts[0];
 
-      console.log(userCredentials)
-
       client = new Client(userCredentials);
       client.on("stanza", function onStanza(stanza) {
         //console.log(stanza)
@@ -197,7 +195,7 @@ io.sockets.on('connection', function (socket) {
       });
       client.on("error", function(msg){
         console.log(msg)
-        //socket.emit('error', msg);
+        socket.emit('clienterror', msg);
       })
     })();
   })
@@ -206,10 +204,15 @@ io.sockets.on('connection', function (socket) {
   })
   socket.on('error', function(msg){
     console.log('error handler', msg)
-    socket.emit('clienterror', msg)
+  })
+  socket.on('forceDisconnect', function(){
+    console.log('force disconnect')
+    client.disconnect()
+    socket.disconnect(true)
   })
   socket.on('disconnect', function() {
     console.log('Got disconnect!');
+    socket.disconnect(true)
     if(typeof client != "undefined" && client != null){
       client.disconnect()
     }

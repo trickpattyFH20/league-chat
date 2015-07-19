@@ -1,5 +1,5 @@
 //init app
-var app = angular.module('myApp', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'ngTouch']);
+var app = angular.module('myApp', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'ngTouch', 'dialogs.main']);
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     //
@@ -22,7 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         })
 });
 
-app.service('socketService', function($http){
+app.factory('socketService', function($http){
     var svc = {}
     svc.env = {'path': undefined},
     svc.creds = {},
@@ -44,10 +44,10 @@ app.service('socketService', function($http){
         console.log(env)
         if(env == '/Users/Patrick'){
             console.log('dev config', env)
-            return io();
+            return io.connect('http://localhost:8080',{'forceNew': true});
         }else{
             console.log('live config', env)
-            return io("http://weblolchat2-weblolchat.rhcloud.com:8000");
+            return io.connect("http://weblolchat2-weblolchat.rhcloud.com:8000", {'forceNew': true});
         }
         //console.log(this.getEnv().success(function(data){return data}))
     },
@@ -142,9 +142,8 @@ app.controller('loginCtrl',
             }
 }]);
 
-app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', function($scope, $state, $http, socketService, friendList){
+app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', 'dialogs', function($scope, $state, $http, socketService, friendList, dialogs){
 
-    var h2 = document.getElementsByTagName("h2")[0];
     var eventName = "visibilitychange";
     if (document.webkitHidden != undefined) {
         eventName = "webkitvisibilitychange";
@@ -157,7 +156,6 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     } else {
         //api not available
     }
-
 
     function visibilityChanged() {
         if (document.hidden || document.mozHidden || document.msHidden || document.webkitHidden) {
@@ -179,6 +177,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
         alert('tab activated')
     }, true)
 
+    //TODO change this to check if user is authed
     if(!socketService.creds.username){
         $state.go('home')
     }
@@ -195,6 +194,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     $scope.$watch('socket', function (ov, nv) {
         console.log($scope.socket)
         if ($scope.socket) {
+            console.log('socket is set')
             $scope.socket.on('online', function () {
                 console.log('online clientside event')
                 $scope.$apply()
@@ -226,7 +226,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
                     var idEnd = message.from.indexOf('@')
                     var thisId = message.from.slice(3, idEnd);
                     if($scope.currentMessages.shortId == thisId){
-                        console.log('crrent message id is this message id')
+                        console.log('current message id is this message id')
                         isCurrent = true;
                     }
                 }
@@ -236,10 +236,25 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             $scope.socket.on('clienterror', function (msg) {
                 console.log('caught it')
                 console.log(msg)
+                dialogs.notify('Login Error', msg).result.then(function(btn){
+                    $scope.confirmed = 'You confirmed "Yes."';
+                    console.log('yes')
+                    $state.go('home')
+                },function(btn){
+                    $scope.confirmed = 'You confirmed "No."';
+                    console.log('no')
+                    $state.go('home')
+                });
                 $scope.$apply()
             })
         }
     })
+
+    $scope.$on("$stateChangeStart",   function(evt, to, toP, from, fromP){
+        $scope.socket.emit('forceDisconnect')
+        socketService.creds = {}
+        $scope.socket = undefined;
+    });
 
     //old ctrl
     $scope.showMessages = function(shortId){

@@ -152,6 +152,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     }, false);
 
     window.addEventListener("pageshow", function(evt){
+        alert('page show')
         $scope.socket.emit('auth', socketService.creds);
     }, false);
 

@@ -148,17 +148,17 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     var eventName = "visibilitychange";
     if (document.webkitHidden != undefined) {
         eventName = "webkitvisibilitychange";
-        h2.innerHTML("<h2>webkit prefix detected</h2>");
+        h2.innerHTML += "<h2>webkit prefix detected</h2>";
     } else if (document.mozHidden != undefined) {
         eventName = "mozvisibilitychange";
-        h2.innerHTML("<h2>moz prefix detected</h2>");
+        h2.innerHTML += "<h2>moz prefix detected</h2>";
     } else if (document.msHidden != undefined) {
         eventName = "msvisibilitychange";
-        h2.innerHTML("<h2>MS prefix detected</h2>");
+        h2.innerHTML += "<h2>MS prefix detected</h2>";
     } else if (document.hidden != undefined) {
-        h2.innerHTML("<h2>standard API detected</h2>");
+        h2.innerHTML += "<h2>standard API detected</h2>";
     } else {
-        h2.innerHTML("<h2>API not available</h2>");
+        h2.innerHTML += "<h2>API not available</h2>";
     }
 
 

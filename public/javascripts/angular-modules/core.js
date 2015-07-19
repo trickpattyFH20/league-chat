@@ -144,25 +144,27 @@ app.controller('loginCtrl',
 
 app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', function($scope, $state, $http, socketService, friendList){
 
+    var h2 = document.getElementsByTagName("h2")[0];
     var eventName = "visibilitychange";
     if (document.webkitHidden != undefined) {
         eventName = "webkitvisibilitychange";
-        document.write("<h2>webkit prefix detected</h2>");
+        h2.innerHTML("<h2>webkit prefix detected</h2>");
     } else if (document.mozHidden != undefined) {
         eventName = "mozvisibilitychange";
-        document.write("<h2>moz prefix detected</h2>");
+        h2.innerHTML("<h2>moz prefix detected</h2>");
     } else if (document.msHidden != undefined) {
         eventName = "msvisibilitychange";
-        document.write("<h2>MS prefix detected</h2>");
+        h2.innerHTML("<h2>MS prefix detected</h2>");
     } else if (document.hidden != undefined) {
-        document.write("<h2>standard API detected</h2>");
+        h2.innerHTML("<h2>standard API detected</h2>");
     } else {
-        document.write("<h2>API not available</h2>");
+        h2.innerHTML("<h2>API not available</h2>");
     }
 
 
     function visibilityChanged() {
         var h4 = document.getElementsByTagName("h4")[0];
+        console.log(h4)
         if (document.hidden || document.mozHidden || document.msHidden || document.webkitHidden) {
             h4.innerHTML += "<br>Hidden at " + Date().toString();
             setTimeout(function () {

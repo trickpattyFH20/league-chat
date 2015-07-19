@@ -148,42 +148,29 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     var eventName = "visibilitychange";
     if (document.webkitHidden != undefined) {
         eventName = "webkitvisibilitychange";
-        h2.innerHTML += "<h2>webkit prefix detected</h2>";
     } else if (document.mozHidden != undefined) {
         eventName = "mozvisibilitychange";
-        h2.innerHTML += "<h2>moz prefix detected</h2>";
     } else if (document.msHidden != undefined) {
         eventName = "msvisibilitychange";
-        h2.innerHTML += "<h2>MS prefix detected</h2>";
     } else if (document.hidden != undefined) {
-        h2.innerHTML += "<h2>standard API detected</h2>";
+        //standard api detected
     } else {
-        h2.innerHTML += "<h2>API not available</h2>";
+        //api not available
     }
 
 
     function visibilityChanged() {
-        var h4 = document.getElementsByTagName("h4")[0];
-        console.log(h4)
         if (document.hidden || document.mozHidden || document.msHidden || document.webkitHidden) {
-            h4.innerHTML += "<br>Hidden at " + Date().toString();
             setTimeout(function () {
-                h4.innerHTML += "<br>Timer at " + Date().toString();
+               //js will be paused here, any functions here will execute when tab is returned to
             }, 3000);
 
         } else {
-            h4.innerHTML += "<br>Shown at " + Date().toString();
+            //user switched back to our tab
+            //check roster again here and any other missing stanzas
         }
     }
     document.addEventListener(eventName, visibilityChanged, false);
-
-    window.onpageshow = function () {
-        h4.innerHTML = "<br>Page show at " + Date().toString();
-    };
-
-    window.onpagehide = function () {
-        h4.innerHTML = "<br>Page hide at " + Date().toString();
-    };
 
     $scope.formData = {};
     $scope.showMsg = false;

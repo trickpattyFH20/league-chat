@@ -144,12 +144,51 @@ app.controller('loginCtrl',
 
 app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', function($scope, $state, $http, socketService, friendList){
 
+    var eventName = "visibilitychange";
+    if (document.webkitHidden != undefined) {
+        eventName = "webkitvisibilitychange";
+        document.write("<h2>webkit prefix detected</h2>");
+    } else if (document.mozHidden != undefined) {
+        eventName = "mozvisibilitychange";
+        document.write("<h2>moz prefix detected</h2>");
+    } else if (document.msHidden != undefined) {
+        eventName = "msvisibilitychange";
+        document.write("<h2>MS prefix detected</h2>");
+    } else if (document.hidden != undefined) {
+        document.write("<h2>standard API detected</h2>");
+    } else {
+        document.write("<h2>API not available</h2>");
+    }
+
+
+    function visibilityChanged() {
+        var h4 = document.getElementsByTagName("h4")[0];
+        if (document.hidden || document.mozHidden || document.msHidden || document.webkitHidden) {
+            h4.innerHTML += "<br>Hidden at " + Date().toString();
+            setTimeout(function () {
+                h4.innerHTML += "<br>Timer at " + Date().toString();
+            }, 3000);
+
+        } else {
+            h4.innerHTML += "<br>Shown at " + Date().toString();
+        }
+    }
+    document.addEventListener(eventName, visibilityChanged, false);
+
+    window.onpageshow = function () {
+        h4.innerHTML = "<br>Page show at " + Date().toString();
+    };
+
+    window.onpagehide = function () {
+        h4.innerHTML = "<br>Page hide at " + Date().toString();
+    };
+
     $scope.formData = {};
     $scope.showMsg = false;
 
     window.addEventListener('activate', function(){
         alert('tab activated')
-    })
+    }, true)
 
     if(!socketService.creds.username){
         $state.go('home')

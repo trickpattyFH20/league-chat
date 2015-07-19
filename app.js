@@ -193,7 +193,11 @@ io.sockets.on('connection', function (socket) {
         console.log('message received')
         socket.emit('message', message);
       });
-      client.on("error", function(msg){
+      /*client.on("error", function(msg){
+        console.log(msg)
+        //socket.emit('clienterror', msg);
+      })*/
+      client.on("sockerror", function(msg){
         console.log(msg)
         socket.emit('clienterror', msg);
       })

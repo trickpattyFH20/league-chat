@@ -144,18 +144,6 @@ app.controller('loginCtrl',
 
 app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', function($scope, $state, $http, socketService, friendList){
 
-    window.addEventListener("pagehide", function(evt){
-        $scope.iosHidden = true
-        if($scope.socket){
-            $scope.socket.emit('disconnect')
-        }
-    }, false);
-
-    window.addEventListener("pageshow", function(evt){
-        alert('page show')
-        $scope.socket.emit('auth', socketService.creds);
-    }, false);
-
     $scope.formData = {};
     $scope.showMsg = false;
 

@@ -46,7 +46,6 @@ app.factory('socketService', function($http){
             });
     },
     svc.connection = function(env){
-        console.log(env)
         if(env == '/Users/Patrick'){
             console.log('dev config', env)
             return io.connect('http://localhost:8080',{'forceNew': true});
@@ -74,7 +73,6 @@ app.factory('friendList', function(){
     svc.online = [];
 
     svc.newPresence = function(friend) {
-        console.log(friend)
         var jidEnd = friend.jid.indexOf('@')
         friend.shortId = friend.jid.slice(3, jidEnd)
         friend.messages = [];
@@ -161,7 +159,6 @@ app.factory('friendList', function(){
         }*/
     };
     svc.newMessage = function(newMsg, isCurrent) {
-        console.log(newMsg)
         if(newMsg.from == 'self'){
             for(var i=0;i<svc.online.length;i++){
                 thisJid = svc.online[i].shortId
@@ -202,7 +199,6 @@ app.controller('loginCtrl',
             $scope.formData.server = 'NA';
 
             $scope.login = function(){
-                console.log('in login func')
                 socketService.creds = $scope.formData;
                 $state.go('chat')
             }
@@ -253,7 +249,6 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     }
 
     socketService.getEnv().success(function (data) {
-        console.log(data)
         $scope.socket = socketService.connection(data.env)
         $scope.socket.emit('auth', socketService.creds);
     })
@@ -262,11 +257,9 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     $scope.onlineFriends = []
 
     $scope.$watch('socket', function (ov, nv) {
-        console.log($scope.socket)
         if ($scope.socket) {
             console.log('socket is set')
             $scope.socket.on('online', function () {
-                console.log('online clientside event')
                 $scope.$apply()
             })
             $scope.socket.on('roster', function (list) {
@@ -298,7 +291,6 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
                     var idEnd = message.from.indexOf('@')
                     var thisId = message.from.slice(3, idEnd);
                     if($scope.currentMessages.shortId == thisId){
-                        console.log('current message id is this message id')
                         isCurrent = true;
                     }
                 }

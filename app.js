@@ -82,7 +82,7 @@ var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 server.timeout = 0;
 server.listen(server_port, server_ip_address, function(){
-  console.log("Listening on " + server_ip_address + ", server_port " + server_port)
+  //console.log("Listening on " + server_ip_address + ", server_port " + server_port)
 });
 //server.on('error', onError);
 server.on('error', function(){'catch the error plox'});
@@ -177,23 +177,23 @@ io.sockets.on('connection', function (socket) {
         //console.log(stanza)
       });
       client.on("online", function(){
-        console.log('we are online! send success back')
+        //console.log('we are online! send success back')
         socket.emit('online', 'success');
       });
       client.on("roster", function () {
-        console.log('we have the roster')
+        //console.log('we have the roster')
         var friends = client.getFriendlist()
         //console.log(friends)
         socket.emit('roster', friends);
       });
       client.on("presence", function (friend) {
-        console.log('presence update')
+        //console.log('presence update')
         friend.statusObj = {}
         parseStatus.call(friend.statusObj, friend.status);
         socket.emit('updatefriend', friend);
       });
       client.on("message", function (message) {
-        console.log('message received')
+        //console.log('message received')
         socket.emit('message', message);
       });
       /*client.on("error", function(msg){

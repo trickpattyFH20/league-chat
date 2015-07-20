@@ -358,8 +358,10 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     }
 }]);
 
-app.controller('aboutCtrl', ['$scope', '$http', 'socketService', function($scope, $http, socketService){
-
+app.controller('aboutCtrl', ['$scope', '$state', '$http', 'socketService', function($scope, $state, $http, socketService){
+    $scope.login = function(){
+        $state.go('home')
+    }
 }]);
 
 app.directive('ngEnter', function () {

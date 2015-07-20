@@ -15,6 +15,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: "angular-partials/home.html",
             controller:'loginCtrl'
         })
+        .state('about', {
+            url: "/about",
+            templateUrl: "angular-partials/about.html",
+            controller:'aboutCtrl'
+        })
         .state('chat', {
             url: "/chat",
             templateUrl:"angular-partials/chat.html",
@@ -196,10 +201,14 @@ app.controller('loginCtrl',
             $scope.formData = {};
             $scope.formData.server = 'NA';
 
-            $scope.login = function () {
+            $scope.login = function(){
                 console.log('in login func')
                 socketService.creds = $scope.formData;
                 $state.go('chat')
+            }
+
+            $scope.about = function(){
+                $state.go('about')
             }
 }]);
 
@@ -347,6 +356,10 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
         $scope.currentMessages = undefined;
         $scope.showMsg = false;
     }
+}]);
+
+app.controller('aboutCtrl', ['$scope', '$http', 'socketService', function($scope, $http, socketService){
+
 }]);
 
 app.directive('ngEnter', function () {

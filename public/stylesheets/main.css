@@ -211,8 +211,10 @@ body {
   left: 250px;
   width: 0;
   height: 100%;
+  overflow-x: hidden;
   margin-left: -250px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;

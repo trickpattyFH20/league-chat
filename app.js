@@ -154,7 +154,8 @@ var io = require('socket.io').listen(server);
 //lol dependencies
 var Client = require("client"),
     fs = require("fs"),
-    should = require("should")
+    should = require("should"),
+    parseStatus = require("status")
 
 io.sockets.on('connection', function (socket) {
   var client;
@@ -187,6 +188,8 @@ io.sockets.on('connection', function (socket) {
       });
       client.on("presence", function (friend) {
         console.log('presence update')
+        friend.statusObj = {}
+        parseStatus.call(friend.statusObj, friend.status);
         socket.emit('updatefriend', friend);
       });
       client.on("message", function (message) {

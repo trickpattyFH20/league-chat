@@ -222,7 +222,7 @@ body {
   transition: all 0.5s ease;
 }
 #wrapper.toggled #sidebar-wrapper {
-  width: 250px;
+  min-width: 270px;
 }
 #page-content-wrapper {
   position: absolute;
@@ -233,9 +233,8 @@ body {
 }
 /* Sidebar Styles */
 .sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
+  position: relative;
+  width: 270px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -247,6 +246,10 @@ body {
   display: block;
   text-decoration: none;
   color: #999999;
+}
+.sidebar-nav li img {
+  display: inline-block;
+  height: 30px;
 }
 .sidebar-nav li a:hover {
   cursor: pointer;

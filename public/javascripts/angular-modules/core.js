@@ -59,18 +59,64 @@ app.factory('socketService', function($http){
 
 app.factory('friendList', function(){
     var svc = {};
+    svc.list = [];
+    svc.shortIds = function(){
+        for(var i=0;i < svc.list.length;i++){
+            jidEnd = svc.list[i].jid.indexOf('@')
+            svc.list[i].shortId = svc.list[i].jid.slice(3, jidEnd)
+        }
+    }
     svc.online = [];
 
     svc.newPresence = function(friend) {
-        switch(friend.online) {
+        console.log(friend)
+        var jidEnd = friend.jid.indexOf('@')
+        friend.shortId = friend.jid.slice(3, jidEnd)
+        friend.messages = [];
+        friend.unread = 0;
+
+        //if already in list, don't add to online
+        // (presence changes for away / status updates / in game upadates)
+        var found = false;
+        for(var i=0;i<svc.list.length;i++){
+            if(friend.shortId == svc.list[i].shortId){
+                found = true;
+                //if online
+                if(friend.online == true){
+                    //if friend is in total list, remove it and push to online
+                    if(found == true && svc.list[i].messages){
+                        friend = svc.list[i]
+                    }
+                    svc.online.push(friend)
+                    svc.list.splice(i, 1)
+                }
+            }else if(friend.online == false){
+                for(var j=0;j < svc.online.length;j++){
+                    if(friend.shortId == svc.online[j].shortId){
+                        if(found){
+                            svc.list[i] = friend
+                            //break;
+                        }else{
+                            svc.list.push(svc.online[j])
+                            //break;
+                        }
+                        svc.online.splice(j, 1)
+                    }
+                }
+            }
+        }
+        /*switch(friend.online) {
             case true:
                 var found = false;
+                //if already in list, don't add to online
+                // (presence changes for away / status updates / in game upadates)
                 for(var i=0;i<svc.online.length;i++){
                     if(friend.name == svc.online[i].name){
                         found = true;
                         break;
                     }
                 }
+                //if they aren't in the online list, add them
                 if(found == false){
                     friend.messages = [];
                     friend.unread = 0;
@@ -87,12 +133,9 @@ app.factory('friendList', function(){
                     }
                 }
                 break;
-            default:
+            default:twit
             console.log('unrecognized presence')
-        }
-        if(friend.online == true){
-
-        }
+        }*/
     };
     svc.newMessage = function(newMsg, isCurrent) {
         console.log(newMsg)
@@ -200,8 +243,10 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
                 $scope.$apply()
             })
             $scope.socket.on('roster', function (list) {
-                //$scope.friends = list;
-                //$scope.$apply()
+                friendList.list = list
+                friendList.shortIds();
+                $scope.offlineFriends = friendList.list
+                $scope.$apply()
             })
             $scope.socket.on('updatefriend', function (friend) {
                 //TODO remove timeout and rework:

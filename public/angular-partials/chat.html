@@ -1,13 +1,28 @@
 <div id="wrapper" ng-class="{'toggled':!showMsg}">
     <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#">Online Friends</a></li>
-            <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends track by $index">
-                <a>{{friend.name}}
-                    <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
-                </a>
-            </li>
-        </ul>
+        <tabset>
+            <tab heading="Online Friends">
+                <ul class="sidebar-nav">
+                    <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends track by $index">
+                        <a>{{friend.name}}
+                            <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                            <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                        </a>
+                    </li>
+                </ul>
+            </tab>
+            <tab heading="Offline Friends">
+                <ul class="sidebar-nav">
+                    <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in offlineFriends track by $index">
+                        <a>{{friend.name}}
+                            <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                            <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                        </a>
+                    </li>
+                </ul>
+            </tab>
+
+        </tabset>
     </div>
     <div id="page-content-wrapper">
         <div class="page-content">

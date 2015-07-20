@@ -214,14 +214,20 @@ io.sockets.on('connection', function (socket) {
   })
   socket.on('forceDisconnect', function(){
     console.log('force disconnect')
-    socket.emit('disconnect')
-  })
-  socket.on('disconnect', function() {
-    console.log('Got disconnect!');
     socket.disconnect(true)
     if(typeof client != "undefined" && client != null){
       client.disconnect()
     }
+  })
+  socket.on('disconnect', function() {
+    if(typeof client != "undefined" && client != null){
+      client.disconnect()
+    }
+    /*console.log('Got disconnect!');
+    socket.disconnect(true)
+    if(typeof client != "undefined" && client != null){
+      client.disconnect()
+    }*/
   });
 });
 

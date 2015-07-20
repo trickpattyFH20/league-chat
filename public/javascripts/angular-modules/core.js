@@ -252,7 +252,8 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
 
     $scope.$on("$stateChangeStart",   function(evt, to, toP, from, fromP){
         $scope.socket.emit('forceDisconnect')
-        socketService.creds = {}
+        socketService.creds = {};
+        friendList.online = [];
         $scope.socket = undefined;
     });
 
@@ -280,6 +281,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
         $scope.formData.message = '';
     }
     $scope.showSide = function(){
+        $scope.currentMessages = undefined;
         $scope.showMsg = false;
     }
 }]);

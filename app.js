@@ -211,8 +211,7 @@ io.sockets.on('connection', function (socket) {
   })
   socket.on('forceDisconnect', function(){
     console.log('force disconnect')
-    client.disconnect()
-    socket.disconnect(true)
+    socket.emit('disconnect')
   })
   socket.on('disconnect', function() {
     console.log('Got disconnect!');

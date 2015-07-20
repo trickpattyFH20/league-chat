@@ -300,3 +300,12 @@ body {
 .panel .panel-footer {
   background-color: rgba(0, 0, 0, 0.6);
 }
+.green {
+  color: green;
+}
+.yellow {
+  color: yellow;
+}
+.red {
+  color: red;
+}

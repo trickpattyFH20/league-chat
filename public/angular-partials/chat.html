@@ -6,6 +6,7 @@
                     <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends track by $index">
                         <a>{{friend.name}}
                             <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                            <i class="fa fa-circle {{friend.statusColor}}"></i>
                             <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
                         </a>
                     </li>

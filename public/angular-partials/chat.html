@@ -4,10 +4,17 @@
             <tab heading="Online Friends">
                 <ul class="sidebar-nav">
                     <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends track by $index">
-                        <a>{{friend.name}}
-                            <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
-                            <i class="fa fa-circle {{friend.statusColor}}"></i>
-                            <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-7"> <span class="pull-right">{{friend.name}}</span></div>
+                                <div class="col-xs-5">
+                                    <span class="pull-left">
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                        <i class="fa fa-circle {{friend.statusColor}}"></i>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                    </span>
+                                </div>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -15,9 +22,16 @@
             <tab heading="Offline Friends">
                 <ul class="sidebar-nav">
                     <li ng-repeat="friend in offlineFriends track by $index">
-                        <a>{{friend.name}}
-                            <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
-                            <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <span class="pull-right">
+                                        {{friend.name}}
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                    </span>
+                                </div>
+                            </div>
                         </a>
                     </li>
                 </ul>

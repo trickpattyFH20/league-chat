@@ -300,6 +300,24 @@ body {
 .panel .panel-footer {
   background-color: rgba(0, 0, 0, 0.6);
 }
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: white;
+  background-color: #9954bb;
+  border: 1px solid #9954bb;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.nav-tabs {
+  border-bottom: 1px solid #9954bb;
+}
+.nav-tabs > li {
+  width: 50%;
+}
+.nav-tabs > li > a {
+  margin-right: 0px;
+}
 .green {
   color: green;
 }

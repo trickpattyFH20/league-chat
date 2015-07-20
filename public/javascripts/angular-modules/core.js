@@ -77,34 +77,52 @@ app.factory('friendList', function(){
 
         //if already in list, don't add to online
         // (presence changes for away / status updates / in game upadates)
-        var found = false;
-        for(var i=0;i<svc.list.length;i++){
-            if(friend.shortId == svc.list[i].shortId){
-                found = true;
-                //if online
-                if(friend.online == true){
-                    //if friend is in total list, remove it and push to online
-                    if(found == true && svc.list[i].messages){
-                        friend = svc.list[i]
-                    }
-                    svc.online.push(friend)
-                    svc.list.splice(i, 1)
-                }
-            }else if(friend.online == false){
-                for(var j=0;j < svc.online.length;j++){
-                    if(friend.shortId == svc.online[j].shortId){
-                        if(found){
-                            svc.list[i] = friend
-                            //break;
-                        }else{
-                            svc.list.push(svc.online[j])
-                            //break;
-                        }
-                        svc.online.splice(j, 1)
-                    }
-                }
+        var foundOffline = {'presence':false, 'idx':undefined};
+        var foundOnline= {'presence':false, 'idx':undefined};
+        //is friend in offline list?
+        for(var i=0;i<svc.list.length;i++) {
+            if (friend.shortId == svc.list[i].shortId) {
+                foundOffline.presence = true;
+                foundOffline.idx = i
+                //found offline
             }
         }
+        //is friend in online list?
+        for(var j=0;j < svc.online.length;j++) {
+            if (friend.shortId == svc.online[j].shortId) {
+                foundOnline.presence = true;
+                foundOnline.idx = j;
+                //found online
+            }
+        }
+        if(friend.online == true){
+        //if new friend is online
+            if(foundOffline.presence == true){
+                //if friend is in total list, remove it and push to online
+                if(svc.list[foundOffline.idx].messages){
+                    friend.messages = angular.copy(svc.list[foundOffline.idx].messages)
+                }
+                svc.list.splice(foundOffline.idx, 1)
+            }
+            if(foundOnline.presence){
+                svc.online[foundOnline.idx] = friend
+            }else{
+                svc.online.push(friend)
+            }
+        }else if(friend.online == false){
+        //if new friend is offline
+            if(foundOffline.presence){
+                svc.list[foundOffline.idx] = friend
+                //break;
+            }else{
+                svc.list.push(svc.online[foundOnline.idx])
+                //break;
+            }
+            if(foundOnline.presence){
+                svc.online.splice(foundOnline.idx, 1)
+            }
+        }
+
         /*switch(friend.online) {
             case true:
                 var found = false;

@@ -13,7 +13,7 @@
             </tab>
             <tab heading="Offline Friends">
                 <ul class="sidebar-nav">
-                    <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in offlineFriends track by $index">
+                    <li ng-repeat="friend in offlineFriends track by $index">
                         <a>{{friend.name}}
                             <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
                             <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>

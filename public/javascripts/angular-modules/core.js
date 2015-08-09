@@ -371,3 +371,33 @@ app.directive('ngEnter', function () {
         });
     };
 });
+
+app.directive('resize', function ($window) {
+    return function (scope, element) {
+        var w = angular.element($window);
+        scope.getWindowDimensions = function () {
+            return {
+                'h': w.height(),
+                'w': w.width()
+            };
+        };
+        scope.$watch(function() {return element[0].scrollHeight }, function(n, o){
+            element[0].scrollTop = element[0].scrollHeight;
+        });
+        scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
+            scope.windowHeight = newValue.h;
+            scope.windowWidth = newValue.w;
+
+            scope.style = function () {
+                return {
+                    'height': (newValue.h - 134) + 'px'
+                };
+            };
+
+        }, true);
+
+        w.bind('resize', function () {
+            scope.$apply();
+        });
+    }
+})

@@ -174,7 +174,8 @@ io.sockets.on('connection', function (socket) {
 
       client = new Client(userCredentials);
       client.on("stanza", function onStanza(stanza) {
-        //console.log(stanza)
+        console.log('new stanza')
+        console.log(stanza)
       });
       client.on("online", function(){
         //console.log('we are online! send success back')

@@ -239,9 +239,29 @@ body {
 }
 
 #page-content-wrapper {
-  //width: 100%;
+  width: 100%;
+  height:100%;
   position: absolute;
   padding: 15px;
+  & .page-content{
+    width: 100%;
+    height:100%;
+    & .container-fluid, & .row, & .col-md-12{
+      height:100%;
+      & .panel{
+        width: 100%;
+        height:100%;
+        position:relative;
+        & .panel-body{
+          overflow: scroll;
+        }
+        & .panel-footer{
+          position:absolute;
+          bottom:0px;
+        }
+      }
+    }
+  }
 }
 
 #wrapper.toggled #page-content-wrapper {

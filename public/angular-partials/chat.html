@@ -50,7 +50,7 @@
                                 </a>
                                 <h3 class="panel-title">Chat With {{currentMessages.name}}</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body" ng-style="style()" resize>
                                 <div ng-repeat="message in currentMessages.messages track by $index" ng-class="{ 'mymsg': message.to, 'theirmsg': !message.to }">
                                     {{message.body}}
                                 </div>

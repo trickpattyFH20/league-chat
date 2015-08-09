@@ -225,8 +225,37 @@ body {
   min-width: 270px;
 }
 #page-content-wrapper {
+  width: 100%;
+  height: 100%;
   position: absolute;
   padding: 15px;
+}
+#page-content-wrapper .page-content {
+  width: 100%;
+  height: 100%;
+}
+#page-content-wrapper .page-content .container-fluid,
+#page-content-wrapper .page-content .row,
+#page-content-wrapper .page-content .col-md-12 {
+  height: 100%;
+}
+#page-content-wrapper .page-content .container-fluid .panel,
+#page-content-wrapper .page-content .row .panel,
+#page-content-wrapper .page-content .col-md-12 .panel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#page-content-wrapper .page-content .container-fluid .panel .panel-body,
+#page-content-wrapper .page-content .row .panel .panel-body,
+#page-content-wrapper .page-content .col-md-12 .panel .panel-body {
+  overflow: scroll;
+}
+#page-content-wrapper .page-content .container-fluid .panel .panel-footer,
+#page-content-wrapper .page-content .row .panel .panel-footer,
+#page-content-wrapper .page-content .col-md-12 .panel .panel-footer {
+  position: absolute;
+  bottom: 0px;
 }
 #wrapper.toggled #page-content-wrapper {
   position: absolute;

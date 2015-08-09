@@ -251,6 +251,11 @@ body {
 #page-content-wrapper .page-content .col-md-12 .panel .panel-body {
   overflow: scroll;
 }
+#page-content-wrapper .page-content .container-fluid .panel .panel-body > div,
+#page-content-wrapper .page-content .row .panel .panel-body > div,
+#page-content-wrapper .page-content .col-md-12 .panel .panel-body > div {
+  word-wrap: break-word;
+}
 #page-content-wrapper .page-content .container-fluid .panel .panel-footer,
 #page-content-wrapper .page-content .row .panel .panel-footer,
 #page-content-wrapper .page-content .col-md-12 .panel .panel-footer {

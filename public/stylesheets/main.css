@@ -227,7 +227,7 @@ body {
 #page-content-wrapper {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   padding: 15px;
 }
 #page-content-wrapper .page-content {
@@ -258,7 +258,7 @@ body {
   bottom: 0px;
 }
 #wrapper.toggled #page-content-wrapper {
-  position: absolute;
+  position: relative;
 }
 /* Sidebar Styles */
 .sidebar-nav {

@@ -222,7 +222,7 @@ body {
   transition: all 0.5s ease;
 }
 #wrapper.toggled #sidebar-wrapper {
-  min-width: 270px;
+  min-width: 320px;
 }
 #page-content-wrapper {
   width: 100%;
@@ -269,7 +269,7 @@ body {
 /* Sidebar Styles */
 .sidebar-nav {
   position: relative;
-  width: 270px;
+  width: 320px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -280,7 +280,7 @@ body {
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #999999;
+  //color: #999999;
 }
 .sidebar-nav li img {
   display: inline-block;

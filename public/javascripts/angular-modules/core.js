@@ -75,7 +75,9 @@ app.factory('friendList', function(){
     svc.newPresence = function(friend) {
         var jidEnd = friend.jid.indexOf('@')
         friend.shortId = friend.jid.slice(3, jidEnd)
-        friend.messages = [];
+        if(!friend.messages){
+            friend.messages = [];
+        }
         friend.unread = 0;
 
         //if already in list, don't add to online
@@ -254,7 +256,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     })
     //for production pass in param to io("http://weblolchat-weblolchat.rhcloud.com:8000")
 
-    $scope.onlineFriends = []
+    $scope.onlineFriends = [];
 
     $scope.$watch('socket', function (ov, nv) {
         if ($scope.socket) {
@@ -399,5 +401,19 @@ app.directive('resize', function ($window) {
         w.bind('resize', function () {
             scope.$apply();
         });
+    }
+})
+
+app.filter('onlineColorFilter', function(){
+    return function(input, color){
+        var out = [];
+        for(var i=0;i<input.length;i++){
+            if(input[i].statusColor){
+                if(input[i].statusColor == color){
+                        out.push(input[i])
+                    }
+            }
+        }
+        return out;
     }
 })

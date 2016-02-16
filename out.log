@@ -1,0 +1,1795 @@
+Listening on 127.0.0.1, server_port 8080
+we are online
+/Users/Patrick
+[0mGET /chat [32m200 [0m15.882 ms - 2614[0m
+[0mGET /stylesheets/main.css [32m200 [0m8.042 ms - 7119[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m13.782 ms - 127019[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m7.736 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.js [32m200 [0m8.784 ms - 14417[0m
+new stanza
+Stanza {
+  name: 'iq',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net',
+     id: 'plc-roster-request-1452740541201-0',
+     type: 'result',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'query',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum21753646@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: '60s',
+    jid: 'sum21753646@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>513</profileIcon><level>30</level><wins>789</wins><leaves>8</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><statusMsg>d1cks hard</statusMsg><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><championMasteryScore>67</championMasteryScore><skinname>Ahri</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738433548</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum20374082@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'DoubleStrafe',
+    jid: 'sum20374082@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>916</profileIcon><level>30</level><wins>2369</wins><leaves>32</leaves><odinWins>58</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Heimerdinger's Mercenaries</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>85</rankedWins><championMasteryScore>132</championMasteryScore><gameStatus>outOfGame</gameStatus><statusMsg /></body>
+red
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum22019229@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'AtlasGenesis',
+    jid: 'sum22019229@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>577</profileIcon><level>30</level><wins>577</wins><leaves>12</leaves><odinWins>25</odinWins><odinLeaves>1</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Akali's Gladiators</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>28</rankedWins><championMasteryScore>39</championMasteryScore><statusMsg /><skinname>Thresh</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452734287745</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum40631342@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'g0ds b1ood',
+    jid: 'sum40631342@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>547</profileIcon><level>30</level><wins>408</wins><leaves>13</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>83</championMasteryScore><statusMsg>吧啦啦啦</statusMsg><rankedLeagueName>Singed's Hunters</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_3x3</rankedLeagueQueue><rankedWins>10</rankedWins><skinname>Zac</skinname><gameQueueType>RANKED_TEAM_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739805607</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum42919242@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'CaliBro420',
+    jid: 'sum42919242@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>23</profileIcon><level>30</level><wins>467</wins><leaves>13</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Shen's Giants</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>44</rankedWins><championMasteryScore>52</championMasteryScore><statusMsg /><skinname>Ezreal</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452740349541</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43165305@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'merkosaurus',
+    jid: 'sum43165305@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>547</profileIcon><level>30</level><wins>303</wins><leaves>11</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Jarvan IV's Wardens</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>33</rankedWins><championMasteryScore>35</championMasteryScore><statusMsg /><skinname>Thresh</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452740314590</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47058030@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'KRAZY l YZARK',
+    jid: 'sum47058030@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>666</profileIcon><level>30</level><wins>603</wins><leaves>12</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>154</championMasteryScore><statusMsg>1v1 me ill wreck you</statusMsg><rankedLeagueName>Udyr's Paragons</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>155</rankedWins><skinname>Ezreal</skinname><gameQueueType>ARAM_UNRANKED_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739700824</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47165567@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Permitted Goose',
+    jid: 'sum47165567@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>661</profileIcon><level>30</level><wins>1216</wins><leaves>29</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Orianna's Corruptors</rankedLeagueName><rankedLeagueDivision>V</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_5x5</rankedLeagueQueue><rankedWins>4</rankedWins><championMasteryScore>207</championMasteryScore><statusMsg>TOKI MAKES COMEBACKS</statusMsg><gameStatus>inTeamBuilder</gameStatus></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51126654@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'moonelfcat',
+    jid: 'sum51126654@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>922</profileIcon><level>30</level><wins>1629</wins><leaves>3</leaves><odinWins>2</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>138</championMasteryScore><statusMsg /><rankedLeagueName>Karthus's Scions</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>353</rankedWins><skinname>Morgana</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739915087</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51706792@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: '2 e',
+    jid: 'sum51706792@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>981</profileIcon><level>30</level><wins>493</wins><leaves>4</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Akali's Warmongers</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>480</rankedWins><championMasteryScore>239</championMasteryScore><statusMsg>g.o.d</statusMsg><skinname>Gragas</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738431802</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum53296492@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Kaboshi15',
+    jid: 'sum53296492@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>937</profileIcon><level>30</level><wins>833</wins><leaves>31</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>146</championMasteryScore><isObservable>ALL</isObservable><statusMsg /><rankedLeagueName>Riven's Tyrants</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>225</rankedWins><skinname>LeeSin</skinname><gameQueueType>CAP_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738833183</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum61990481@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'SexyMan602',
+    jid: 'sum61990481@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>20</profileIcon><level>30</level><wins>568</wins><leaves>24</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>92</championMasteryScore><skinname>Blitzcrank</skinname><gameQueueType>NORMAL</gameQueueType><timeStamp>1452654049778</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Ahri's Templars</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>51</rankedWins><statusMsg /></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51083016@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'J U C K F O S H',
+    jid: 'sum51083016@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>936</profileIcon><level>30</level><wins>452</wins><leaves>20</leaves><odinWins>19</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>139</championMasteryScore><statusMsg>DragonSlayer Vayne?</statusMsg><skinname>Jinx</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><timeStamp>1452734944288</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Kayle's Wardens</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>PLATINUM</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_3x3</rankedLeagueQueue><rankedWins>14</rankedWins></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum68311110@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'CantidoNandaba',
+    jid: 'sum68311110@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>948</profileIcon><level>30</level><wins>270</wins><leaves>12</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>62</championMasteryScore><statusMsg>Saitama</statusMsg><skinname>Yasuo</skinname><gameQueueType>NORMAL</gameQueueType><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><timeStamp>1452739444174</timeStamp><gameStatus>outOfGame</gameStatus></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net/plc',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element { name: 'status', parent: [Circular], attrs: {}, children: [] } ] }
+[]
+[0mGET /angular-partials/chat.html [32m200 [0m0.917 ms - 6109[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.969 ms - 1155268[0m
+/Users/Patrick
+[0mGET /service/devservice [32m200 [0m1.526 ms - 24[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.806 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+/Users/Patrick
+[0mGET /service/devservice [32m200 [0m0.827 ms - 24[0m
+we are online
+new stanza
+Stanza {
+  name: 'iq',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net',
+     id: 'plc-roster-request-1452740553382-0',
+     type: 'result',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'query',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum20374082@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'DoubleStrafe',
+    jid: 'sum20374082@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>916</profileIcon><level>30</level><wins>2369</wins><leaves>32</leaves><odinWins>58</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Heimerdinger's Mercenaries</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>85</rankedWins><championMasteryScore>132</championMasteryScore><gameStatus>outOfGame</gameStatus><statusMsg /></body>
+red
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum21753646@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: '60s',
+    jid: 'sum21753646@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>513</profileIcon><level>30</level><wins>789</wins><leaves>8</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><statusMsg>d1cks hard</statusMsg><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><championMasteryScore>67</championMasteryScore><skinname>Ahri</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738433548</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum22019229@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'AtlasGenesis',
+    jid: 'sum22019229@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>577</profileIcon><level>30</level><wins>577</wins><leaves>12</leaves><odinWins>25</odinWins><odinLeaves>1</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Akali's Gladiators</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>28</rankedWins><championMasteryScore>39</championMasteryScore><statusMsg /><skinname>Thresh</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452734287745</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum40631342@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'g0ds b1ood',
+    jid: 'sum40631342@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>547</profileIcon><level>30</level><wins>408</wins><leaves>13</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>83</championMasteryScore><statusMsg>吧啦啦啦</statusMsg><rankedLeagueName>Singed's Hunters</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_3x3</rankedLeagueQueue><rankedWins>10</rankedWins><skinname>Zac</skinname><gameQueueType>RANKED_TEAM_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739805607</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum42919242@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'CaliBro420',
+    jid: 'sum42919242@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>23</profileIcon><level>30</level><wins>467</wins><leaves>13</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Shen's Giants</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>44</rankedWins><championMasteryScore>52</championMasteryScore><statusMsg /><skinname>Ezreal</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452740349541</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43165305@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'merkosaurus',
+    jid: 'sum43165305@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>547</profileIcon><level>30</level><wins>303</wins><leaves>11</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Jarvan IV's Wardens</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>33</rankedWins><championMasteryScore>35</championMasteryScore><statusMsg /><skinname>Thresh</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452740314590</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47165567@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Permitted Goose',
+    jid: 'sum47165567@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>661</profileIcon><level>30</level><wins>1216</wins><leaves>29</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Orianna's Corruptors</rankedLeagueName><rankedLeagueDivision>V</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_5x5</rankedLeagueQueue><rankedWins>4</rankedWins><championMasteryScore>207</championMasteryScore><statusMsg>TOKI MAKES COMEBACKS</statusMsg><gameStatus>inTeamBuilder</gameStatus></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47058030@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'KRAZY l YZARK',
+    jid: 'sum47058030@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>666</profileIcon><level>30</level><wins>603</wins><leaves>12</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>154</championMasteryScore><statusMsg>1v1 me ill wreck you</statusMsg><rankedLeagueName>Udyr's Paragons</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>155</rankedWins><skinname>Ezreal</skinname><gameQueueType>ARAM_UNRANKED_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739700824</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51083016@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'J U C K F O S H',
+    jid: 'sum51083016@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>936</profileIcon><level>30</level><wins>452</wins><leaves>20</leaves><odinWins>19</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>139</championMasteryScore><statusMsg>DragonSlayer Vayne?</statusMsg><skinname>Jinx</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><timeStamp>1452734944288</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Kayle's Wardens</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>PLATINUM</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_3x3</rankedLeagueQueue><rankedWins>14</rankedWins></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51126654@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'moonelfcat',
+    jid: 'sum51126654@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>922</profileIcon><level>30</level><wins>1629</wins><leaves>3</leaves><odinWins>2</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>138</championMasteryScore><statusMsg /><rankedLeagueName>Karthus's Scions</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>353</rankedWins><skinname>Morgana</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739915087</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51706792@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: '2 e',
+    jid: 'sum51706792@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>981</profileIcon><level>30</level><wins>493</wins><leaves>4</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Akali's Warmongers</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>480</rankedWins><championMasteryScore>239</championMasteryScore><statusMsg>g.o.d</statusMsg><skinname>Gragas</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738431802</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum53296492@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Kaboshi15',
+    jid: 'sum53296492@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>937</profileIcon><level>30</level><wins>833</wins><leaves>31</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>146</championMasteryScore><isObservable>ALL</isObservable><statusMsg /><rankedLeagueName>Riven's Tyrants</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>225</rankedWins><skinname>LeeSin</skinname><gameQueueType>CAP_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738833183</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum61990481@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'SexyMan602',
+    jid: 'sum61990481@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>20</profileIcon><level>30</level><wins>568</wins><leaves>24</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>92</championMasteryScore><skinname>Blitzcrank</skinname><gameQueueType>NORMAL</gameQueueType><timeStamp>1452654049778</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Ahri's Templars</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>51</rankedWins><statusMsg /></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum68311110@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'CantidoNandaba',
+    jid: 'sum68311110@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>948</profileIcon><level>30</level><wins>270</wins><leaves>12</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>62</championMasteryScore><statusMsg>Saitama</statusMsg><skinname>Yasuo</skinname><gameQueueType>NORMAL</gameQueueType><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><timeStamp>1452739444174</timeStamp><gameStatus>outOfGame</gameStatus></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net/plc',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element { name: 'status', parent: [Circular], attrs: {}, children: [] } ] }
+[]
+/Users/Patrick
+[0mGET / [36m304 [0m5.815 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m2.235 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m2.943 ms - -[0m
+[0mGET /javascripts/angular-modules/dialogs.js [36m304 [0m0.674 ms - -[0m
+[0mGET /javascripts/angular-modules/core.js [36m304 [0m0.618 ms - -[0m
+[0mGET /images/riftbg.jpg [36m304 [0m0.406 ms - -[0m
+[0mGET /angular-partials/home.html [36m304 [0m0.461 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m1.290 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m0.907 ms - -[0m
+[0mGET /angular-partials/chat.html [32m200 [0m2.446 ms - 6109[0m
+/Users/Patrick
+[0mGET /service/devservice [32m200 [0m0.824 ms - 24[0m
+we are online
+new stanza
+Stanza {
+  name: 'iq',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net',
+     id: 'plc-roster-request-1452740579145-0',
+     type: 'result',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'query',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum20374082@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'DoubleStrafe',
+    jid: 'sum20374082@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>916</profileIcon><level>30</level><wins>2369</wins><leaves>32</leaves><odinWins>58</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Heimerdinger's Mercenaries</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>85</rankedWins><championMasteryScore>132</championMasteryScore><gameStatus>outOfGame</gameStatus><statusMsg /></body>
+red
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum21753646@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: '60s',
+    jid: 'sum21753646@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>513</profileIcon><level>30</level><wins>789</wins><leaves>8</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><statusMsg>d1cks hard</statusMsg><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><championMasteryScore>67</championMasteryScore><skinname>Ahri</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738433548</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum22019229@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'AtlasGenesis',
+    jid: 'sum22019229@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>577</profileIcon><level>30</level><wins>577</wins><leaves>12</leaves><odinWins>25</odinWins><odinLeaves>1</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Akali's Gladiators</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>28</rankedWins><championMasteryScore>39</championMasteryScore><statusMsg /><skinname>Thresh</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452734287745</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum40631342@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'g0ds b1ood',
+    jid: 'sum40631342@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>547</profileIcon><level>30</level><wins>408</wins><leaves>13</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>83</championMasteryScore><statusMsg>吧啦啦啦</statusMsg><rankedLeagueName>Singed's Hunters</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_3x3</rankedLeagueQueue><rankedWins>10</rankedWins><skinname>Zac</skinname><gameQueueType>RANKED_TEAM_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739805607</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47058030@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'KRAZY l YZARK',
+    jid: 'sum47058030@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>666</profileIcon><level>30</level><wins>603</wins><leaves>12</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>154</championMasteryScore><statusMsg>1v1 me ill wreck you</statusMsg><rankedLeagueName>Udyr's Paragons</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>155</rankedWins><skinname>Ezreal</skinname><gameQueueType>ARAM_UNRANKED_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739700824</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum42919242@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'CaliBro420',
+    jid: 'sum42919242@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>23</profileIcon><level>30</level><wins>467</wins><leaves>13</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Shen's Giants</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>44</rankedWins><championMasteryScore>52</championMasteryScore><statusMsg /><skinname>Ezreal</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452740349541</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43165305@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'merkosaurus',
+    jid: 'sum43165305@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>547</profileIcon><level>30</level><wins>303</wins><leaves>11</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Jarvan IV's Wardens</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>33</rankedWins><championMasteryScore>35</championMasteryScore><statusMsg /><skinname>Thresh</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452740314590</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51083016@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'J U C K F O S H',
+    jid: 'sum51083016@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>936</profileIcon><level>30</level><wins>452</wins><leaves>20</leaves><odinWins>19</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>139</championMasteryScore><statusMsg>DragonSlayer Vayne?</statusMsg><skinname>Jinx</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><timeStamp>1452734944288</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Kayle's Wardens</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>PLATINUM</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_3x3</rankedLeagueQueue><rankedWins>14</rankedWins></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47165567@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Permitted Goose',
+    jid: 'sum47165567@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>661</profileIcon><level>30</level><wins>1216</wins><leaves>29</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Orianna's Corruptors</rankedLeagueName><rankedLeagueDivision>V</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_TEAM_5x5</rankedLeagueQueue><rankedWins>4</rankedWins><championMasteryScore>207</championMasteryScore><statusMsg>TOKI MAKES COMEBACKS</statusMsg><gameStatus>inTeamBuilder</gameStatus></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51126654@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'moonelfcat',
+    jid: 'sum51126654@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>922</profileIcon><level>30</level><wins>1629</wins><leaves>3</leaves><odinWins>2</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>138</championMasteryScore><statusMsg /><rankedLeagueName>Karthus's Scions</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>353</rankedWins><skinname>Morgana</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452739915087</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51706792@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: '2 e',
+    jid: 'sum51706792@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>981</profileIcon><level>30</level><wins>493</wins><leaves>4</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Akali's Warmongers</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>480</rankedWins><championMasteryScore>239</championMasteryScore><statusMsg>g.o.d</statusMsg><skinname>Gragas</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738431802</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum53296492@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Kaboshi15',
+    jid: 'sum53296492@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>937</profileIcon><level>30</level><wins>833</wins><leaves>31</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>146</championMasteryScore><isObservable>ALL</isObservable><statusMsg /><rankedLeagueName>Riven's Tyrants</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>225</rankedWins><skinname>LeeSin</skinname><gameQueueType>CAP_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1452738833183</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum61990481@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'SexyMan602',
+    jid: 'sum61990481@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>20</profileIcon><level>30</level><wins>568</wins><leaves>24</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>92</championMasteryScore><skinname>Blitzcrank</skinname><gameQueueType>NORMAL</gameQueueType><timeStamp>1452654049778</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Ahri's Templars</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>51</rankedWins><statusMsg /></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum68311110@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'CantidoNandaba',
+    jid: 'sum68311110@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>948</profileIcon><level>30</level><wins>270</wins><leaves>12</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>62</championMasteryScore><statusMsg>Saitama</statusMsg><skinname>Yasuo</skinname><gameQueueType>NORMAL</gameQueueType><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><timeStamp>1452739444174</timeStamp><gameStatus>outOfGame</gameStatus></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net/plc',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element { name: 'status', parent: [Circular], attrs: {}, children: [] } ] }
+[]
+Listening on 127.0.0.1, server_port 8080
+/Users/Patrick
+[0mGET / [32m200 [0m19.657 ms - 2614[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m8.490 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m7.157 ms - 7119[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.164 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.js [32m200 [0m1.043 ms - 14417[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.989 ms - 1155268[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.866 ms - 2456[0m
+[0mGET /images/favicons/favicon.ico [32m200 [0m0.929 ms - 1150[0m
+[0mGET /angular-partials/chat.html [32m200 [0m2.148 ms - 6109[0m
+/Users/Patrick
+[0mGET /service/devservice [32m200 [0m2.099 ms - 24[0m
+we are online
+new stanza
+Stanza {
+  name: 'iq',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net',
+     id: 'plc-roster-request-1455582994287-0',
+     type: 'result',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'query',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum11965@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'SmileyFrank',
+    jid: 'sum11965@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>2</profileIcon><level>30</level><wins>675</wins><leaves>6</leaves><odinWins>2</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><championMasteryScore>141</championMasteryScore><statusMsg /><gameQueueType>RANKED_SOLO_5x5</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1455580335176</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum107707@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Nabtogo',
+    jid: 'sum107707@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>785</profileIcon><level>30</level><wins>437</wins><leaves>6</leaves><odinWins>2</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><statusMsg>atsis avo evoM</statusMsg><rankedLeagueName /><rankedLeagueDivision /><rankedLeagueTier /><rankedLeagueQueue /><championMasteryScore>63</championMasteryScore><skinname>Lucian</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1455581150059</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum35093447@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'ImAScrubReally',
+    jid: 'sum35093447@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>989</profileIcon><level>30</level><wins>821</wins><leaves>28</leaves><odinWins>9</odinWins><odinLeaves>1</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><statusMsg>save me plz</statusMsg><gameQueueType>RANKED_SOLO_5x5</gameQueueType><rankedLeagueName>Shen's Commanders</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>84</rankedWins><championMasteryScore>143</championMasteryScore><timeStamp>1455582889508</timeStamp><gameStatus>championSelect</gameStatus></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum39622075@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'My name is Teemo',
+    jid: 'sum39622075@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>983</profileIcon><level>30</level><wins>1083</wins><leaves>42</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>168</championMasteryScore><statusMsg /><gameQueueType>RANKED_SOLO_5x5</gameQueueType><timeStamp>1455581180219</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Galio's Warriors</rankedLeagueName><rankedLeagueDivision>V</rankedLeagueDivision><rankedLeagueTier>PLATINUM</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>89</rankedWins></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum42673694@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'TheLeagueLord',
+    jid: 'sum42673694@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>956</profileIcon><level>30</level><wins>604</wins><leaves>56</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>80</championMasteryScore><statusMsg /><gameQueueType>RANKED_SOLO_5x5</gameQueueType><rankedLeagueName>Zed's Mercenaries</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>42</rankedWins><timeStamp>1455582905690</timeStamp><gameStatus>championSelect</gameStatus></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum42756321@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'LN BabyBird',
+    jid: 'sum42756321@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>907</profileIcon><level>30</level><wins>735</wins><leaves>63</leaves><odinWins>1</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Dr. Mundo's Army</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>11</rankedWins><championMasteryScore>195</championMasteryScore><statusMsg>What are "friends?"</statusMsg><skinname>Thresh</skinname><gameQueueType>NORMAL</gameQueueType><gameStatus>inGame</gameStatus><timeStamp>1455582335576</timeStamp></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43444595@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'omegaXscepter',
+    jid: 'sum43444595@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>657</profileIcon><level>30</level><wins>423</wins><leaves>77</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>UNRANKED</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Corki's Dawnbringers</rankedLeagueName><rankedLeagueDivision>V</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>12</rankedWins><championMasteryScore>117</championMasteryScore><statusMsg>duo ?</statusMsg><timeStamp>1455582695722</timeStamp><gameStatus>championSelect</gameStatus></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47058030@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'KRAZY l YZARK',
+    jid: 'sum47058030@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>666</profileIcon><level>30</level><wins>660</wins><leaves>12</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><rankedLeagueName>Graves's Duelists</rankedLeagueName><rankedLeagueDivision>I</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>12</rankedWins><championMasteryScore>172</championMasteryScore><gameStatus>outOfGame</gameStatus><statusMsg>Stay away. Stop inviting</statusMsg></body>
+green
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum47165567@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Permitted Goose',
+    jid: 'sum47165567@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>603</profileIcon><level>30</level><wins>1245</wins><leaves>29</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>BRONZE</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>220</championMasteryScore><gameQueueType>RANKED_SOLO_5x5</gameQueueType><timeStamp>1455573695171</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>LeBlanc's Scouts</rankedLeagueName><rankedLeagueDivision>II</rankedLeagueDivision><rankedLeagueTier>BRONZE</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>33</rankedWins><statusMsg>WALKING DEAD</statusMsg></body>
+red
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum51126654@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'moonelfcat',
+    jid: 'sum51126654@pvp.net',
+    online: false,
+    group: { name: '**Default' } } ]
+<body><profileIcon>1106</profileIcon><level>30</level><wins>1645</wins><leaves>3</leaves><odinWins>2</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>142</championMasteryScore><statusMsg>In Champion Select</statusMsg><gameQueueType>RANKED_SOLO_5x5</gameQueueType><rankedLeagueName>Brand's Demolishers</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>GOLD</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>149</rankedWins><timeStamp>1455582944458</timeStamp><gameStatus>championSelect</gameStatus></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum48714026@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Sleepy Sarah',
+    jid: 'sum48714026@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>745</profileIcon><level>30</level><wins>757</wins><leaves>24</leaves><odinWins>0</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>SILVER</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>80</championMasteryScore><statusMsg>off-twitch.tv/maplesaryup</statusMsg><skinname>Leona</skinname><gameQueueType>RANKED_SOLO_5x5</gameQueueType><timeStamp>1455580920971</timeStamp><gameStatus>outOfGame</gameStatus><rankedLeagueName>Rengar's Outlaws</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>53</rankedWins></body>
+red
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum53296492@pvp.net/xiff',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'status',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element {
+       name: 'priority',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] } ] }
+[ { name: 'Kaboshi15',
+    jid: 'sum53296492@pvp.net',
+    online: false,
+    group: { name: '**Default', priority: 1 } } ]
+<body><profileIcon>936</profileIcon><level>30</level><wins>880</wins><leaves>31</leaves><odinWins>5</odinWins><odinLeaves>0</odinLeaves><queueType /><rankedLosses>0</rankedLosses><rankedRating>0</rankedRating><tier>GOLD</tier><rankedSoloRestricted>false</rankedSoloRestricted><championMasteryScore>167</championMasteryScore><statusMsg>jax is op</statusMsg><gameQueueType>RANKED_SOLO_5x5</gameQueueType><rankedLeagueName>Gragas's Mercenaries</rankedLeagueName><rankedLeagueDivision>IV</rankedLeagueDivision><rankedLeagueTier>SILVER</rankedLeagueTier><rankedLeagueQueue>RANKED_SOLO_5x5</rankedLeagueQueue><rankedWins>43</rankedWins><timeStamp>1455582932592</timeStamp><gameStatus>championSelect</gameStatus></body>
+yellow
+new stanza
+Stanza {
+  name: 'presence',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net/plc',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'show',
+       parent: [Circular],
+       attrs: {},
+       children: [Object] },
+     Element { name: 'status', parent: [Circular], attrs: {}, children: [] } ] }
+[]
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m2.127 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m0.961 ms - -[0m

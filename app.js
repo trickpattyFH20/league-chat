@@ -47,25 +47,25 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
+// if (app.get('env') === 'development') {
+//   app.use(function(err, req, res, next) {
+//     res.status(err.status || 500);
+//     res.render('error', {
+//       message: err.message,
+//       error: err
+//     });
+//   });
+// }
+//
+// // production error handler
+// // no stacktraces leaked to user
+// app.use(function(err, req, res, next) {
+//   res.status(err.status || 500);
+//   res.render('error', {
+//     message: err.message,
+//     error: {}
+//   });
+// });
 
 var debug = require('debug');
 
@@ -79,7 +79,6 @@ var server = http.createServer(app);
  */
 
 //server.listen(port);
-console.log(process.env)
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = '127.0.0.1';
 
@@ -87,6 +86,7 @@ server.timeout = 0;
 
 if(process.env.EC2_HOME){
   server.listen(server_port)
+  console.log("Listening on server_port " + server_port)
 }else{
   server.listen(server_port, server_ip_address, function(){
       console.log("Listening on " + server_ip_address + ", server_port " + server_port)

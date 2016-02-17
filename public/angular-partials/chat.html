@@ -3,43 +3,66 @@
         <tabset>
             <tab heading="Online Friends">
                 <ul class="sidebar-nav">
-                    <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'green' track by $index">
+                    <li style="border-bottom:1px solid #9954bb;"
+                        ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'green' track by $index">
                         <a>
                             <div class="row">
-                                <div class="col-xs-8"> <span class="pull-right">{{friend.name}}</span></div>
+                                <div class="col-xs-5" style="overflow:hidden;">
+                                  <span style="white-space: nowrap; margin-left:10px" class="pull-left">{{friend.name}}</span>
+                                </div>
+                                <div class="col-xs-3" style="overflow:hidden;">
+                                    <span class="pull-left">{{friend.statusObj.currentGame.status.name}}</span>
+                                </div>
                                 <div class="col-xs-4">
                                     <span class="pull-left">
-                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
                                         <i class="fa fa-circle {{friend.statusColor}}"></i>
                                         <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col-xs-12">
+                                    {{friend.statusObj.currentGame.status.name}}
+                                </div>
+                            </div> -->
+                        </a>
+                    </li>
+                    <li style="border-bottom:1px solid #9954bb;"
+                        ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'yellow' track by $index">
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-5" style="overflow:hidden;">
+                                  <span style="white-space: nowrap; margin-left:10px;" class="pull-left">{{friend.name}}</span>
+                                </div>
+                                <div class="col-xs-3" style="overflow:hidden;">
+                                    <span class="pull-left">{{friend.statusObj.currentGame.status.name}}</span>
+                                </div>
+                                <div class="col-xs-4">
+                                    <span class="pull-left">
+                                        <i class="fa fa-circle {{friend.statusColor}}"></i>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
                                     </span>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'yellow' track by $index">
+                    <li style="border-bottom:1px solid #9954bb;"
+                        ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'red' track by $index">
                         <a>
                             <div class="row">
-                                <div class="col-xs-8"> <span class="pull-right">{{friend.name}}</span></div>
-                                <div class="col-xs-4">
-                                    <span class="pull-left">
-                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
-                                        <i class="fa fa-circle {{friend.statusColor}}"></i>
-                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
-                                    </span>
+                                <div class="col-xs-5" style="overflow:hidden;">
+                                    <span style="white-space: nowrap; margin-left:10px" class="pull-left">{{friend.name}}</span>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'red' track by $index">
-                        <a>
-                            <div class="row">
-                                <div class="col-xs-8"> <span class="pull-right">{{friend.name}}</span></div>
+                                <div class="col-xs-3" style="overflow:hidden;">
+                                    <span class="pull-left">{{friend.statusObj.currentGame.status.name}}</span>
+                                </div>
                                 <div class="col-xs-4">
                                     <span class="pull-left">
-                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
                                         <i class="fa fa-circle {{friend.statusColor}}"></i>
                                         <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
                                     </span>
                                 </div>
                             </div>

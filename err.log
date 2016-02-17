@@ -1,3 +1,22 @@
 Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
 Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
 Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47
+        if (obj.hasOwnProperty(key) && _hasBinary(obj[key])) {
+                ^
+
+RangeError: Maximum call stack size exceeded
+    at Element.hasOwnProperty (native)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47:17)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`

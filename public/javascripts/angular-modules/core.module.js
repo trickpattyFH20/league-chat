@@ -47,11 +47,11 @@ app.factory('socketService', function($http){
     },
     svc.connection = function(env){
         //console.log(env)
-        if(env == '/Users/Patrick'){
-            //console.log('dev config', env)
+        if(env == 'osx'){
+            console.log('dev config', env)
             return io.connect('http://localhost:8080',{'forceNew': true});
         }else if(env == 'windows'){
-            //console.log('live config', env)
+            console.log('dev config', env)
             return io.connect("127.0.0.1:8080", {'forceNew': true});
         }else{
             //console.log('live config', env)
@@ -82,7 +82,7 @@ app.factory('friendList', function(){
         if(!friend.messages){
             friend.messages = [];
         }
-        friend.unread = 0;
+        friend.unread = 1;
 
         //if already in list, don't add to online
         // (presence changes for away / status updates / in game upadates)
@@ -114,6 +114,11 @@ app.factory('friendList', function(){
                 svc.list.splice(foundOffline.idx, 1)
             }
             if(foundOnline.presence){
+                var cacheMsgs = svc.online[foundOnline.idx].messages
+                friend.messages = cacheMsgs;
+                var cacheUnread = svc.online[foundOnline.idx].unread
+                friend.unread = cacheUnread;
+
                 svc.online[foundOnline.idx] = friend
             }else{
                 svc.online.push(friend)
@@ -247,14 +252,13 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             })
             $scope.socket.on('updatefriend', function (friend) {
                 //TODO remove timeout and rework:
-                if(friend.online == false){
-                    if($scope.currentMessages){
-                        //TODO make this work with short id
-                        if($scope.currentMessages.jid == friend.jid){
-                            $scope.currentMessages = undefined;
-                            $scope.showMsg = false;
-                        }
+                if(friend.online == false && $scope.currentMessages){
+                    //TODO make this work with short id
+                    if($scope.currentMessages.jid == friend.jid){
+                        $scope.currentMessages = undefined;
+                        $scope.showMsg = false;
                     }
+
                 }
                 friendList.newPresence(friend)
                 $scope.onlineFriends = friendList.online

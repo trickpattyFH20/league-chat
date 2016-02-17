@@ -6,6 +6,8 @@ router.use(function(req, res, next) {
     res.locals.env = process.env.HOME
     if(process.env.windir){
         res.locals.env = 'windows'
+    }else if(process.env.TERM_PROGRAM.indexOf('Apple') != -1){
+        res.locals.env = 'osx'
     }
     next();
 });

@@ -55,7 +55,7 @@ app.factory('socketService', function($http){
             return io.connect("127.0.0.1:8080", {'forceNew': true});
         }else{
             //console.log('live config', env)
-            return io.connect("http://weblolchat2-weblolchat.rhcloud.com:8000", {'forceNew': true});
+            return io.connect("54.200.145.197:8000", {'forceNew': true});
         }
         //console.log(this.getEnv().success(function(data){return data}))
     },

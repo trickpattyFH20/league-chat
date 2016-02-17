@@ -3,10 +3,10 @@ var router = express.Router();
 router.use(function(req, res, next) {
     // log each request to the console
     // continue doing what we were doing and go to the route
-    res.locals.env = process.env.HOME
+    res.locals.env = process.env.HOME ||
     if(process.env.windir){
         res.locals.env = 'windows'
-    }else if(process.env.TERM_PROGRAM.indexOf('Apple') != -1){
+    }else if(process.env.TERM_PROGRAM){
         res.locals.env = 'osx'
     }
     next();

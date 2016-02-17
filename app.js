@@ -81,11 +81,17 @@ var server = http.createServer(app);
 //server.listen(port);
 console.log(process.env)
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-var server_ip_address = '54.200.145.197' || '127.0.0.1'
+var server_ip_address = '127.0.0.1';
+
 server.timeout = 0;
-server.listen(server_port, server_ip_address, function(){
-    console.log("Listening on " + server_ip_address + ", server_port " + server_port)
-});
+
+if(process.env.EC2_HOME){
+  server.listen(server_port)
+}else{
+  server.listen(server_port, server_ip_address, function(){
+      console.log("Listening on " + server_ip_address + ", server_port " + server_port)
+  });
+}
 //server.on('error', onError);
 server.on('error', function(){'catch the error plox'});
 server.on('listening', onListening);

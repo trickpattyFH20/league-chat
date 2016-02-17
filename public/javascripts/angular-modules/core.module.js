@@ -82,7 +82,7 @@ app.factory('friendList', function(){
         if(!friend.messages){
             friend.messages = [];
         }
-        friend.unread = 1;
+        friend.unread = 0;
 
         //if already in list, don't add to online
         // (presence changes for away / status updates / in game upadates)

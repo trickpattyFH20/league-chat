@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     login(req.params.username, req.params.password, req.params.server)
-    res.send([{1:'fags'}])
+    res.send([{1:'test'}])
 });
 
 module.exports = router;

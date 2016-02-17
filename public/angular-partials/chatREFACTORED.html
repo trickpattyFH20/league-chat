@@ -1,0 +1,106 @@
+<div id="wrapper" ng-class="{'toggled':!chatCtrlVm.showMsg}">
+    <div id="sidebar-wrapper">
+        <tabset>
+            <tab heading="Online Friends">
+                <ul class="sidebar-nav">
+                    <li ng-click="chatCtrlVm.showMessages(friend.shortId)" ng-repeat="friend in chatCtrlVm.onlineFriends | onlineColorFilter:'green' track by $index">
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-8"> <span class="pull-right">{{friend.name}}</span></div>
+                                <div class="col-xs-4">
+                                    <span class="pull-left">
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                        <i class="fa fa-circle {{friend.statusColor}}"></i>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li ng-click="chatCtrlVm.showMessages(friend.shortId)" ng-repeat="friend in chatCtrlVm.onlineFriends | onlineColorFilter:'yellow' track by $index">
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-8"> <span class="pull-right">{{friend.name}}</span></div>
+                                <div class="col-xs-4">
+                                    <span class="pull-left">
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                        <i class="fa fa-circle {{friend.statusColor}}"></i>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li ng-click="chatCtrlVm.showMessages(friend.shortId)" ng-repeat="friend in chatCtrlVm.onlineFriends | onlineColorFilter:'red' track by $index">
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-8"> <span class="pull-right">{{friend.name}}</span></div>
+                                <div class="col-xs-4">
+                                    <span class="pull-left">
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                        <i class="fa fa-circle {{friend.statusColor}}"></i>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </tab>
+            <tab heading="Offline Friends">
+                <ul class="sidebar-nav">
+                    <li ng-repeat="friend in chatCtrlVm.offlineFriends track by $index">
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <span class="pull-right">
+                                        {{friend.name}}
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </tab>
+        </tabset>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div ng-show="chatCtrlVm.showMsg" ng-if="currentMessages" class="panel panel-info">
+                            <div class="panel-heading">
+                                <a ng-click="chatCtrlVm.showSide()">
+                                    <span ng-click="chatCtrlVm.showList()" class="glyphicon glyphicon-triangle-left pull-left" aria-hidden="true"></span>
+                                </a>
+                                <h3 class="panel-title">Chat With {{currentMessages.name}}
+                                    <i class="fa fa-circle {{chatCtrlVm.currentMessages.statusColor}}"></i>
+                                    ({{currentMessages.statusObj.currentGame.status.name}})</h3>
+                            </div>
+                            <div class="panel-body" ng-style="chatCtrlVm.style()" resize>
+                                <div ng-repeat="message in chatCtrlVm.currentMessages.messages track by $index" ng-class="{ 'mymsg': message.to, 'theirmsg': !message.to }">
+                                    {{message.body}}
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" ng-model="chatCtrlVm.formData.message" ng-enter="chatCtrlVm.sendNew()" placeholder="Enter Text Here...">
+                                            <span class="input-group-btn">
+                                                <button ng-click="chatCtrlVm.sendNew()" class="btn btn-info" type="button">SEND</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

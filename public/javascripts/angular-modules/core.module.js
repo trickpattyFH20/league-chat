@@ -46,11 +46,15 @@ app.factory('socketService', function($http){
             });
     },
     svc.connection = function(env){
+        //console.log(env)
         if(env == '/Users/Patrick'){
-            console.log('dev config', env)
+            //console.log('dev config', env)
             return io.connect('http://localhost:8080',{'forceNew': true});
+        }else if(env == 'windows'){
+            //console.log('live config', env)
+            return io.connect("127.0.0.1:8080", {'forceNew': true});
         }else{
-            console.log('live config', env)
+            //console.log('live config', env)
             return io.connect("http://weblolchat2-weblolchat.rhcloud.com:8000", {'forceNew': true});
         }
         //console.log(this.getEnv().success(function(data){return data}))
@@ -212,38 +216,8 @@ app.controller('loginCtrl',
 
 app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', 'dialogs', function($scope, $state, $http, socketService, friendList, dialogs){
 
-    var eventName = "visibilitychange";
-    if (document.webkitHidden != undefined) {
-        eventName = "webkitvisibilitychange";
-    } else if (document.mozHidden != undefined) {
-        eventName = "mozvisibilitychange";
-    } else if (document.msHidden != undefined) {
-        eventName = "msvisibilitychange";
-    } else if (document.hidden != undefined) {
-        //standard api detected
-    } else {
-        //api not available
-    }
-
-    function visibilityChanged() {
-        if (document.hidden || document.mozHidden || document.msHidden || document.webkitHidden) {
-            setTimeout(function () {
-               //js will be paused here, any functions here will execute when tab is returned to
-            }, 3000);
-
-        } else {
-            //user switched back to our tab
-            //check roster again here and any other missing stanzas
-        }
-    }
-    document.addEventListener(eventName, visibilityChanged, false);
-
     $scope.formData = {};
     $scope.showMsg = false;
-
-    window.addEventListener('activate', function(){
-        alert('tab activated')
-    }, true)
 
     //TODO change this to check if user is authed
     if(!socketService.creds.username){
@@ -251,6 +225,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     }
 
     socketService.getEnv().success(function (data) {
+        console.log(data)
         $scope.socket = socketService.connection(data.env)
         $scope.socket.emit('auth', socketService.creds);
     })

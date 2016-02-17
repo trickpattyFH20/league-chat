@@ -84,7 +84,7 @@ app.factory('friendList', function(){
         }
         friend.unread = 0;
 
-        // if already in list, don't add to online
+        //if already in list, don't add to online
         // (presence changes for away / status updates / in game upadates)
         var foundOffline = {'presence':false, 'idx':undefined};
         var foundOnline= {'presence':false, 'idx':undefined};

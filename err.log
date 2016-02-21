@@ -20,3 +20,183 @@ RangeError: Maximum call stack size exceeded
     at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
     at _hasBinary (/Users/Patrick/AtomProjects/weblolchat2/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
 Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+/Users/Patrick/AtomProjects/weblolchat3/app.js:8
+var fs = require('fs';
+                 ^^^^
+
+SyntaxError: missing ) after argument list
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:404:25)
+    at Object.Module._extensions..js (module.js:432:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:313:12)
+    at Module.require (module.js:366:17)
+    at require (module.js:385:17)
+    at Object.<anonymous> (/Users/Patrick/AtomProjects/weblolchat3/bin/www:1:73)
+    at Module._compile (module.js:425:26)
+    at Object.Module._extensions..js (module.js:432:10)
+/Users/Patrick/AtomProjects/weblolchat3/app.js:8
+var fs = require('fs';
+                 ^^^^
+
+SyntaxError: missing ) after argument list
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:404:25)
+    at Object.Module._extensions..js (module.js:432:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:313:12)
+    at Module.require (module.js:366:17)
+    at require (module.js:385:17)
+    at Object.<anonymous> (/Users/Patrick/AtomProjects/weblolchat3/bin/www:1:73)
+    at Module._compile (module.js:425:26)
+    at Object.Module._extensions..js (module.js:432:10)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: connect ETIMEDOUT 192.64.174.69:5223
+    at Object.exports._errnoException (util.js:856:11)
+    at exports._exceptionWithHostPort (util.js:879:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47
+        if (obj.hasOwnProperty(key) && _hasBinary(obj[key])) {
+                ^
+
+RangeError: Maximum call stack size exceeded
+    at Stanza.hasOwnProperty (native)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:17)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47
+        if (obj.hasOwnProperty(key) && _hasBinary(obj[key])) {
+                ^
+
+RangeError: Maximum call stack size exceeded
+    at Stanza.hasOwnProperty (native)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:17)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+buffer.js:174
+  return b instanceof Buffer;
+           ^
+
+RangeError: Maximum call stack size exceeded
+    at Function.isBuffer (buffer.js:174:23)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:27:35)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+/Users/Patrick/AtomProjects/weblolchat3/node_modules/status/index.js:375
+  this.summoner = {
+                ^
+
+TypeError: Cannot set property 'summoner' of undefined
+    at LeagueStatus (/Users/Patrick/AtomProjects/weblolchat3/node_modules/status/index.js:375:17)
+    at ChatClient.<anonymous> (/Users/Patrick/AtomProjects/weblolchat3/app.js:201:28)
+    at emitOne (events.js:77:13)
+    at ChatClient.emit (events.js:169:7)
+    at /Users/Patrick/AtomProjects/weblolchat3/node_modules/client/index.js:217:9
+    at Array.forEach (native)
+    at handlePresenceStanza (/Users/Patrick/AtomProjects/weblolchat3/node_modules/client/index.js:195:19)
+    at Client.onStanza (/Users/Patrick/AtomProjects/weblolchat3/node_modules/client/index.js:515:4)
+    at emitOne (events.js:77:13)
+    at Client.emit (events.js:169:7)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+buffer.js:174
+  return b instanceof Buffer;
+           ^
+
+RangeError: Maximum call stack size exceeded
+    at Function.isBuffer (buffer.js:174:23)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:27:35)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47
+        if (obj.hasOwnProperty(key) && _hasBinary(obj[key])) {
+                ^
+
+RangeError: Maximum call stack size exceeded
+    at Object.hasOwnProperty (native)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:17)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47
+        if (obj.hasOwnProperty(key) && _hasBinary(obj[key])) {
+                ^
+
+RangeError: Maximum call stack size exceeded
+    at Object.hasOwnProperty (native)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:17)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+buffer.js:174
+  return b instanceof Buffer;
+           ^
+
+RangeError: Maximum call stack size exceeded
+    at Function.isBuffer (buffer.js:174:23)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:27:35)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:37:15)
+    at _hasBinary (/Users/Patrick/AtomProjects/weblolchat3/node_modules/socket.io/node_modules/has-binary-data/index.js:47:40)
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`
+Cannot load StringPrep-0.2.3 bindings (using fallback). You may need to `npm install node-stringprep`

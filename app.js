@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
 
-
 var routes = require('./routes/index');
 var login = require('./routes/login');
 
@@ -182,12 +181,21 @@ io.sockets.on('connection', function (socket) {
 
       client = new Client(userCredentials);
       client.on("stanza", function onStanza(stanza) {
-        console.log('new stanza')
-        console.log(stanza)
+        //console.log('new stanza')
+        //console.log(stanza)
       });
       client.on("online", function(){
         //console.log('we are online! send success back')
         socket.emit('online', 'success');
+        var emptyStatus = {};
+        var statusInstance = new parseStatus({
+            statusMsg:'test',
+            gameStatus:{
+                name:'outOfGame'
+            }
+        });
+        var updatedStatus = statusInstance.toString();
+        client.changePresence('green', updatedStatus);
       });
       client.on("roster", function () {
         //console.log('we have the roster')
@@ -198,6 +206,7 @@ io.sockets.on('connection', function (socket) {
       client.on("presence", function (friend) {
         //console.log('presence update')
         friend.statusObj = {}
+        //console.log(parseStatus(friend.status))
         parseStatus.call(friend.statusObj, friend.status);
         socket.emit('updatefriend', friend);
       });

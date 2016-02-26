@@ -27986,3 +27986,85 @@ error handler [Error: ChatClient(opts): opts.accountName has to exist as a strin
 [0mGET /angular-partials/home.html [32m200 [0m0.861 ms - 2456[0m
 error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
 [0mGET /service/devservice [32m200 [0m0.728 ms - 13[0m
+[0mGET / [36m304 [0m3.043 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m1.803 ms - -[0m
+[0mGET /stylesheets/main.css [32m200 [0m2.088 ms - 7180[0m
+[0mGET /javascripts/angular-modules/dialogs.js [36m304 [0m0.913 ms - -[0m
+[0mGET /javascripts/angular-modules/core.module.js [36m304 [0m0.369 ms - -[0m
+[0mGET /images/riftbg.jpg [36m304 [0m0.584 ms - -[0m
+[0mGET /angular-partials/home.html [36m304 [0m0.918 ms - -[0m
+[0mGET /angular-partials/chat.html [32m200 [0m1.151 ms - 9315[0m
+[0mGET /service/devservice [36m304 [0m0.554 ms - -[0m
+[0mGET /chat [36m304 [0m1.524 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m1.216 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m1.775 ms - -[0m
+[0mGET /javascripts/angular-modules/dialogs.js [36m304 [0m0.456 ms - -[0m
+[0mGET /javascripts/angular-modules/core.module.js [36m304 [0m0.398 ms - -[0m
+[0mGET /images/riftbg.jpg [36m304 [0m0.819 ms - -[0m
+[0mGET /angular-partials/chat.html [36m304 [0m0.795 ms - -[0m
+[0mGET /service/devservice [36m304 [0m0.887 ms - -[0m
+[0mGET /angular-partials/home.html [36m304 [0m0.302 ms - -[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /images/favicons/favicon.ico [32m200 [0m0.891 ms - 1150[0m
+[0mGET /home [32m200 [0m1.355 ms - 2708[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m1.065 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m0.681 ms - -[0m
+[0mGET /javascripts/angular-modules/dialogs.js [36m304 [0m1.074 ms - -[0m
+[0mGET /javascripts/angular-modules/core.module.js [36m304 [0m0.320 ms - -[0m
+[0mGET /images/riftbg.jpg [36m304 [0m0.385 ms - -[0m
+[0mGET /angular-partials/home.html [36m304 [0m0.351 ms - -[0m
+[0mGET /images/favicons/favicon.ico [32m200 [0m0.523 ms - 1150[0m
+[0mGET / [36m304 [0m1.641 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m0.523 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m0.410 ms - -[0m
+[0mGET /javascripts/angular-modules/dialogs.js [36m304 [0m0.815 ms - -[0m
+[0mGET /javascripts/angular-modules/core.module.js [36m304 [0m0.935 ms - -[0m
+[0mGET /images/riftbg.jpg [36m304 [0m0.334 ms - -[0m
+[0mGET /angular-partials/home.html [36m304 [0m0.593 ms - -[0m
+[0mGET /angular-partials/chat.html [36m304 [0m0.384 ms - -[0m
+[0mGET /service/devservice [36m304 [0m0.472 ms - -[0m
+[0mGET /angular-partials/chat.html [36m304 [0m0.488 ms - -[0m
+[0mGET /service/devservice [36m304 [0m0.587 ms - -[0m
+error data Stanza {
+  name: 'stream:error',
+  parent: null,
+  attrs: { 'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'conflict',
+       parent: [Circular],
+       attrs: [Object],
+       children: [] },
+     Element {
+       name: 'text',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+Stanza {
+  name: 'stream:error',
+  parent: null,
+  attrs: { 'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'conflict',
+       parent: [Circular],
+       attrs: [Object],
+       children: [] },
+     Element {
+       name: 'text',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+Listening on 127.0.0.1, server_port 8080
+[0mGET / [36m304 [0m16.894 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m5.729 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m5.682 ms - -[0m
+[0mGET /javascripts/angular-modules/dialogs.js [36m304 [0m0.535 ms - -[0m
+[0mGET /javascripts/angular-modules/core.module.js [36m304 [0m0.511 ms - -[0m
+[0mGET /images/riftbg.jpg [36m304 [0m0.360 ms - -[0m
+[0mGET /angular-partials/home.html [36m304 [0m0.382 ms - -[0m
+[0mGET /angular-partials/chat.html [36m304 [0m0.676 ms - -[0m
+[0mGET /service/devservice [36m304 [0m1.357 ms - -[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff2 [32m200 [0m1.893 ms - 2708[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff [32m200 [0m2.048 ms - 2708[0m
+[0mGET /fonts/glyphicons-halflings-regular.ttf [32m200 [0m0.957 ms - 2708[0m

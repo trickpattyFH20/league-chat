@@ -362,3 +362,9 @@ body {
 .red {
   color: red;
 }
+.purple {
+  color: #9954bb;
+}
+.mobile{
+    28px!important;
+}

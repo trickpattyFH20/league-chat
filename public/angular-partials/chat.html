@@ -29,6 +29,31 @@
                         </a>
                     </li>
                     <li style="border-bottom:1px solid #9954bb;"
+                        ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'white' track by $index">
+                        <a>
+                            <div class="row">
+                                <div class="col-xs-5" style="overflow:hidden;">
+                                  <span style="white-spa    ce: nowrap; margin-left:10px" class="pull-left">{{friend.name}}</span>
+                                </div>
+                                <div class="col-xs-3" style="overflow:hidden;">
+                                    <span class="pull-left">{{friend.statusObj.currentGame.status.name}}</span>
+                                </div>
+                                <div class="col-xs-4">
+                                    <span class="pull-left">
+                                        <i class="fa fa-mobile mobile {{friend.statusColor}}"></i>
+                                        <img src="http://avatar.leagueoflegends.com/na/{{friend.name}}.png"/>
+                                        <span class="badge" ng-if="friend.unread != 0">{{friend.unread}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col-xs-12">
+                                    {{friend.statusObj.currentGame.status.name}}
+                                </div>
+                            </div> -->
+                        </a>
+                    </li>
+                    <li style="border-bottom:1px solid #9954bb;"
                         ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'yellow' track by $index">
                         <a>
                             <div class="row">

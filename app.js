@@ -191,11 +191,11 @@ io.sockets.on('connection', function (socket) {
         var statusInstance = new parseStatus({
             statusMsg:'test',
             gameStatus:{
-                name:'outOfGame'
+                name:'mobile'
             }
         });
         var updatedStatus = statusInstance.toString();
-        client.changePresence('green', updatedStatus);
+        client.changePresence('white', updatedStatus);
       });
       client.on("roster", function () {
         //console.log('we have the roster')

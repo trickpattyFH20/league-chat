@@ -27787,3 +27787,202 @@ Listening on 127.0.0.1, server_port 8080
 [0mGET /images/riftbg.jpg [32m200 [0m0.825 ms - 1155268[0m
 [0mGET /angular-partials/chat.html [32m200 [0m1.117 ms - 7674[0m
 [0mGET /service/devservice [32m200 [0m0.997 ms - 13[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff2 [32m200 [0m4.239 ms - 2708[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff [32m200 [0m2.414 ms - 2708[0m
+[0mGET /fonts/glyphicons-halflings-regular.ttf [32m200 [0m2.625 ms - 2708[0m
+[0mGET /chat [32m200 [0m4.570 ms - 2708[0m
+[0mGET /stylesheets/main.css [32m200 [0m3.071 ms - 7119[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m3.940 ms - 127019[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.503 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m2.531 ms - 13704[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.716 ms - 7674[0m
+[0mGET /images/riftbg.jpg [32m200 [0m1.205 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m0.871 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.946 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.719 ms - 13[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff2 [32m200 [0m2.013 ms - 2708[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff [32m200 [0m2.482 ms - 2708[0m
+[0mGET /fonts/glyphicons-halflings-regular.ttf [32m200 [0m2.391 ms - 2708[0m
+Listening on 127.0.0.1, server_port 8080
+[0mGET / [32m200 [0m18.546 ms - 2708[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m5.597 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m2.256 ms - 7119[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m2.603 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.079 ms - 13704[0m
+[0mGET /images/riftbg.jpg [32m200 [0m9.356 ms - 1155268[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.868 ms - 2456[0m
+[0mGET /images/favicons/favicon.ico [32m200 [0m0.899 ms - 1150[0m
+[0mGET /angular-partials/chat.html [32m200 [0m2.228 ms - 7674[0m
+[0mGET /service/devservice [32m200 [0m1.929 ms - 13[0m
+Listening on 127.0.0.1, server_port 8080
+[0mGET / [36m304 [0m12.737 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m5.163 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m5.182 ms - -[0m
+[0mGET /javascripts/angular-modules/dialogs.js [36m304 [0m0.508 ms - -[0m
+[0mGET /javascripts/angular-modules/core.module.js [36m304 [0m0.458 ms - -[0m
+[0mGET /images/riftbg.jpg [36m304 [0m0.338 ms - -[0m
+[0mGET /angular-partials/home.html [36m304 [0m0.370 ms - -[0m
+[0mGET /angular-partials/chat.html [36m304 [0m0.605 ms - -[0m
+[0mGET /service/devservice [36m304 [0m1.426 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m0.541 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m0.430 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m0.487 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m0.518 ms - -[0m
+Listening on 127.0.0.1, server_port 8080
+[0mGET /chat [32m200 [0m15.146 ms - 2708[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m6.421 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m5.848 ms - 7119[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.111 ms - 13758[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.827 ms - 20094[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.618 ms - 7674[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.968 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m1.470 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.764 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.655 ms - 13[0m
+Stanza {
+  name: 'iq',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net',
+     id: 'plc-roster-request-1456449520937-0',
+     type: 'result',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'query',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+Listening on 127.0.0.1, server_port 8080
+[0mGET /chat [32m200 [0m13.558 ms - 2708[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m6.454 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m5.706 ms - 7119[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.620 ms - 13758[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.572 ms - 20094[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.738 ms - 7674[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.581 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m2.206 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.536 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.564 ms - 13[0m
+Stanza {
+  name: 'iq',
+  parent: null,
+  attrs: 
+   { to: 'sum43856825@pvp.net/plc',
+     from: 'sum43856825@pvp.net',
+     id: 'plc-roster-request-1456449538559-0',
+     type: 'result',
+     'xmlns:stream': 'http://etherx.jabber.org/streams' },
+  children: 
+   [ Element {
+       name: 'query',
+       parent: [Circular],
+       attrs: [Object],
+       children: [Object] } ] }
+Listening on 127.0.0.1, server_port 8080
+Listening on 127.0.0.1, server_port 8080
+[0mGET /chat [32m200 [0m13.487 ms - 2708[0m
+[0mGET /stylesheets/main.css [32m200 [0m6.672 ms - 7119[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m6.582 ms - 127019[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.226 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.275 ms - 13758[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.575 ms - 7674[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.700 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m1.571 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.557 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.664 ms - 13[0m
+[0mGET / [36m304 [0m2.468 ms - -[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m0.612 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m0.700 ms - 7119[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m0.630 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m0.771 ms - 13758[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.631 ms - 1155268[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.798 ms - 2456[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.977 ms - 7674[0m
+[0mGET /service/devservice [32m200 [0m0.506 ms - 13[0m
+[0mGET /stylesheets/cosmoBootstrap.css [36m304 [0m1.636 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m0.711 ms - -[0m
+Listening on 127.0.0.1, server_port 8080
+[0mGET /chat [32m200 [0m13.787 ms - 2708[0m
+[0mGET /stylesheets/main.css [32m200 [0m7.757 ms - 7119[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m7.930 ms - 127019[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.224 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.690 ms - 13758[0m
+[0mGET /angular-partials/chat.html [32m200 [0m1.339 ms - 7674[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.529 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m1.537 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.524 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.572 ms - 13[0m
+[0mGET /chat [32m200 [0m1.919 ms - 2708[0m
+[0mGET /stylesheets/main.css [32m200 [0m1.520 ms - 7119[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m1.732 ms - 127019[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m0.668 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m0.792 ms - 13758[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.569 ms - 7674[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.800 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m0.658 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.677 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.473 ms - 13[0m
+[0mGET /chat [32m200 [0m1.558 ms - 2708[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m1.787 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m1.532 ms - 7146[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.608 ms - 13758[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m2.148 ms - 20094[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.887 ms - 1155268[0m
+[0mGET /angular-partials/chat.html [32m200 [0m2.288 ms - 9309[0m
+[0mGET /service/devservice [32m200 [0m0.579 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.681 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.692 ms - 13[0m
+[0mGET /chat [32m200 [0m1.393 ms - 2708[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m1.962 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m1.680 ms - 7181[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.112 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.023 ms - 13758[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.506 ms - 9316[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.647 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m0.493 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.590 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.575 ms - 13[0m
+[0mGET /chat [32m200 [0m1.245 ms - 2708[0m
+[0mGET /stylesheets/main.css [32m200 [0m1.389 ms - 7181[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m1.674 ms - 127019[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.906 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.603 ms - 13758[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.595 ms - 9315[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.912 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m0.611 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.524 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.605 ms - 13[0m
+Listening on 127.0.0.1, server_port 8080
+[0mGET /chat [32m200 [0m13.055 ms - 2708[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m6.464 ms - 127019[0m
+[0mGET /stylesheets/main.css [32m200 [0m5.639 ms - 7181[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m1.335 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m1.311 ms - 13758[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.596 ms - 9315[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.520 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m1.764 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.530 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.632 ms - 13[0m
+[0mGET /chat [32m200 [0m1.993 ms - 2708[0m
+[0mGET /stylesheets/main.css [32m200 [0m0.865 ms - 7181[0m
+[0mGET /stylesheets/cosmoBootstrap.css [32m200 [0m1.829 ms - 127019[0m
+[0mGET /javascripts/angular-modules/dialogs.js [32m200 [0m6.178 ms - 20094[0m
+[0mGET /javascripts/angular-modules/core.module.js [32m200 [0m0.866 ms - 13758[0m
+[0mGET /angular-partials/chat.html [32m200 [0m0.567 ms - 9315[0m
+[0mGET /images/riftbg.jpg [32m200 [0m0.718 ms - 1155268[0m
+[0mGET /service/devservice [32m200 [0m1.490 ms - 13[0m
+[0mGET /angular-partials/home.html [32m200 [0m0.861 ms - 2456[0m
+error handler [Error: ChatClient(opts): opts.accountName has to exist as a string.]
+[0mGET /service/devservice [32m200 [0m0.728 ms - 13[0m

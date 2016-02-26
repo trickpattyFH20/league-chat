@@ -366,5 +366,6 @@ body {
   color: #9954bb;
 }
 .mobile{
-    28px!important;
+    font-size:30px!important;
+    vertical-align: middle;
 }

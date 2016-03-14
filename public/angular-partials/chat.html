@@ -1,7 +1,7 @@
 <div id="wrapper" ng-class="{'toggled':!showMsg}">
     <div id="sidebar-wrapper">
         <tabset>
-            <tab heading="Online Friends">
+            <tab heading="Online Friends" class="{{ isElectron() ? 'electron-padding' : '' }}">
                 <ul class="sidebar-nav">
                     <li style="border-bottom:1px solid #9954bb;"
                         ng-click="showMessages(friend.shortId)" ng-repeat="friend in onlineFriends | onlineColorFilter:'green' track by $index">
@@ -95,7 +95,7 @@
                     </li>
                 </ul>
             </tab>
-            <tab heading="Offline Friends">
+            <tab heading="Offline Friends" class="{{ isElectron() ? 'electron-padding' : '' }}">
                 <ul class="sidebar-nav">
                     <li ng-repeat="friend in offlineFriends track by $index">
                         <a>

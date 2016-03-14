@@ -221,14 +221,8 @@ app.controller('loginCtrl',
 
 app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', 'dialogs', function($scope, $state, $http, socketService, friendList, dialogs){
 
-    function isElectron() {
+    $scope.isElectron = function(){
         return (window.navigator.userAgent.indexOf("Electron") !== -1);
-    }
-
-    console.log(window.navigator.userAgent)
-
-    if(isElectron()){
-        console.log('using election')
     }
 
     $scope.formData = {};

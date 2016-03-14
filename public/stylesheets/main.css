@@ -335,6 +335,11 @@ body {
 .panel .panel-footer {
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+.electron-padding > a{
+    padding-top:25px;
+}
+
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {

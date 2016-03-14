@@ -226,7 +226,8 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     }
 
     if(isElectron()){
-        alert('using election')
+        console.log('using election')
+        console.log(window.navigator.userAgent)
     }
 
     $scope.formData = {};

@@ -336,7 +336,7 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.electron-padding > a{
+.nav-tabs > li.electron-padding > a{
     padding-top:25px;
 }
 

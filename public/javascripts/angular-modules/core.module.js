@@ -206,6 +206,10 @@ app.controller('loginCtrl',
     ['$scope', '$rootScope', '$timeout', '$http', 'socketService', '$state', 'friendList',
         function ($scope, $rootScope, $timeout, $http, socketService, $state, friendList) {
 
+            $scope.isElectron = function(){
+                return (window.navigator.userAgent.indexOf("Electron") !== -1);
+            }
+
             $scope.formData = {};
             $scope.formData.server = 'NA';
 

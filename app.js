@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var http = require('http');
 
 var routes = require('./routes/index');
+var tmpapps = require('./routes/tmpapps');
 var login = require('./routes/login');
 
 var app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/service', routes);
 app.use('/login', login);
+app.use('/tmpapps', tmpapps);
 app.use('/*', routes);
 
 

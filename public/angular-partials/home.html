@@ -4,7 +4,16 @@
             <div class="inner cover">
                 <h1 class="cover-heading">League Chat</h1>
                 <p class="lead">beta version 0.1.2</p>
-                <button ng-click="about()" class="btn btn-info">About League Chat</button>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button ng-click="about()" class="btn btn-info">About League Chat</button>
+                    </div>
+                    <div style="margin-top:15px;" ng-if="!isElectron()" class="col-xs-12">
+                        <a target="_self" href="/tmpapps/LeagueChat.dmg">
+                            <button class="btn btn-info"><i class="fa fa-download"></i> League Chat OSX desktop app </button>
+                        </a>
+                    </div>
+                </div>
                 <hr>
                 <div class="form-group">
                     <lable class="control-label"><h4>Username</h4></lable>

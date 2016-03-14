@@ -8,10 +8,20 @@
                     <div class="col-xs-12">
                         <button ng-click="about()" class="btn btn-info">About League Chat</button>
                     </div>
-                    <div style="margin-top:15px;" ng-if="!isElectron()" class="col-xs-12">
-                        <a target="_self" href="/tmpapps/LeagueChat.dmg">
-                            <button class="btn btn-info"><i class="fa fa-download"></i> League Chat OSX desktop app </button>
-                        </a>
+                    <div ng-if="!isElectron()">
+                        <div class="col-xs-12" style="margin-top:15px;">
+                            <span style="font-size:20px;font-weight: 300;">Desktop Apps</span>
+                        </div>
+                        <div style="margin-top:15px;" class="col-xs-6 text-right">
+                            <a target="_self" href="/tmpapps/LeagueChat.dmg">
+                                <button class="btn btn-info"><i class="fa fa-download"></i> OSX El Capitan</button>
+                            </a>
+                        </div>
+                        <div style="margin-top:15px;" class="col-xs-6 text-left">
+                            <a target="_self" href="/tmpapps/LeagueChat.zip">
+                                <button class="btn btn-info"><i class="fa fa-download"></i> Windows 10</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <hr>

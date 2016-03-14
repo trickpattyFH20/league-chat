@@ -15,4 +15,9 @@ router.get('/LeagueChat.app', function(req, res, next) {
     res.download(file); // Set disposition and send it.
 });
 
+router.get('/LeagueChat.zip', function(req, res, next) {
+    var file =  + '../tmpapps/LeagueChat.zip';
+    res.download(file); // Set disposition and send it.
+});
+
 module.exports = router;

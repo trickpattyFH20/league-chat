@@ -225,9 +225,10 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
         return (window.navigator.userAgent.indexOf("Electron") !== -1);
     }
 
+    console.log(window.navigator.userAgent)
+
     if(isElectron()){
         console.log('using election')
-        console.log(window.navigator.userAgent)
     }
 
     $scope.formData = {};

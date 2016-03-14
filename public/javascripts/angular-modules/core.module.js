@@ -221,6 +221,14 @@ app.controller('loginCtrl',
 
 app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'friendList', 'dialogs', function($scope, $state, $http, socketService, friendList, dialogs){
 
+    function isElectron() {
+        return (window.navigator.userAgent.indexOf("Electron") !== -1);
+    }
+
+    if(isElectron()){
+        alert('using election')
+    }
+
     $scope.formData = {};
     $scope.showMsg = false;
 

@@ -161,10 +161,10 @@ function onListening() {
 var io = require('socket.io').listen(server);
 
 //lol dependencies
-var Client = require("client"),
+var Client = require("server-lol-chat"),
     fs = require("fs"),
     should = require("should"),
-    parseStatus = require("status")
+    parseStatus = require("./node_modules/server-lol-chat/core/status")
 
 io.sockets.on('connection', function (socket) {
   var client;
@@ -183,8 +183,8 @@ io.sockets.on('connection', function (socket) {
 
       client = new Client(userCredentials);
       client.on("stanza", function onStanza(stanza) {
-        //console.log('new stanza')
-        //console.log(stanza)
+        console.log('new stanza')
+        console.log(stanza)
       });
       client.on("online", function(){
         //console.log('we are online! send success back')

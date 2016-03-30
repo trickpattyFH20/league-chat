@@ -336,6 +336,17 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.spacer{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.spacer-top{
+    margin-top:15px;
+}
+.spacer-bottom{
+    margin-bottom:15px;
+}
+
 .electron-page{
     padding-top:30px!important;
 }
@@ -358,7 +369,11 @@ body {
   border-bottom: 1px solid #9954bb;
 }
 .nav-tabs > li {
-  width: 50%;
+  width: 33.3%;
+}
+.nav-tabs > li:nth-child(2) {
+    border-left:1px solid #9954bb;
+    border-right:1px solid #9954bb;
 }
 .nav-tabs > li > a {
   margin-right: 0px;

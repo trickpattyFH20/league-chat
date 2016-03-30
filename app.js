@@ -185,6 +185,7 @@ io.sockets.on('connection', function (socket) {
       client.on("stanza", function onStanza(stanza) {
         console.log('new stanza')
         console.log(stanza)
+        socket.emit('stanza', stanza);
       });
       client.on("online", function(){
         //console.log('we are online! send success back')

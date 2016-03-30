@@ -252,6 +252,9 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             $scope.socket.on('online', function () {
                 $scope.$apply()
             })
+            $scope.socket.on('stanza', function (stanza) {
+                //console.log(stanza)
+            })
             $scope.socket.on('roster', function (list) {
                 friendList.list = list
                 friendList.shortIds();
@@ -322,7 +325,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
         }
     }
     $scope.sendNew = function(){
-        console.log('send new function')
+        //console.log('send new function')
         $scope.socket.emit('sendMessage', {'jid':$scope.currentMessages.jid, 'message':$scope.formData.message});
         friendList.newMessage(
             {
@@ -338,6 +341,11 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
         $scope.currentMessages = undefined;
         $scope.showMsg = false;
     }
+
+    $scope.logout = function(){
+        location.reload();
+    }
+
 }]);
 
 app.controller('aboutCtrl', ['$scope', '$state', '$http', 'socketService', function($scope, $state, $http, socketService){

@@ -321,6 +321,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             if(shortId == friendList.online[i].shortId){
                 friendList.online[i].unread = 0;
                 $scope.currentMessages = friendList.online[i]
+                console.log(friendList.online[i])
             }
         }
     }
@@ -340,6 +341,19 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     $scope.showSide = function(){
         $scope.currentMessages = undefined;
         $scope.showMsg = false;
+    }
+
+    $scope.addFriend = function(){
+        console.log('add friend function')
+        $http({
+            method:'POST',
+            url:'/service/addfriend',
+            data:{ 'summonerName': $scope.formData.addFriend }
+        }).then(function(res){
+            console.log(res)
+        }, function(res){
+            console.log(res)
+        })
     }
 
     $scope.logout = function(){

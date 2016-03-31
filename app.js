@@ -192,7 +192,7 @@ io.sockets.on('connection', function (socket) {
         socket.emit('online', 'success');
         var emptyStatus = {};
         var statusInstance = new parseStatus({
-            statusMsg:'test',
+            statusMsg:'on http://league.chat',
             gameStatus:{
                 name:'mobile'
             }

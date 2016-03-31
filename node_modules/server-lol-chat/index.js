@@ -13,8 +13,8 @@ var XmppClient = require("node-xmpp-client"),
 	CHAT_PASSWORD_SUFFIX = "",
 	CHAT_STANDARD_RESOURCE = "xiff",
 	CHAT_CUSTOM_RESOURCE = "plc",
- //  	CHAT_KEEPALIVE_RESOURCE = "plckeepalive",
- //  	CHAT_KEEPALIVE_INTERVAL = 5 * 60 * 1000, // 5 min
+  	CHAT_KEEPALIVE_RESOURCE = "plckeepalive",
+  	CHAT_KEEPALIVE_INTERVAL = 5 * 60 * 1000, // 5 min
 	XMPP_DEFINED_ERROR_CONDITIONS = [
 		"bad-request",
 		"conflict",
@@ -483,7 +483,7 @@ function ChatClient(options) {
 		//console.log('we are online')
 		var presence = new ltx.Element("presence", {}).
 			c("show").t("chat").up().
-			c("status").t("");
+			c("status").t("leaguechat");
 
 		var rosterRequest = new ltx.Element("iq", {
 			type: "get",
@@ -504,11 +504,12 @@ function ChatClient(options) {
 
 		client.send(rosterRequest);
 		client.send(presence);
-    // setInterval(function () {
-    //   if (that.isOnline() && !(that.isClosed())) {
-    //     client.send(keepalive);
-    //   }
-    // }, CHAT_KEEPALIVE_INTERVAL);
+    setInterval(function () {
+      if (that.isOnline() && !(that.isClosed())) {
+        //client.send(keepalive);
+        client.send(rosterRequest);
+      }
+    }, CHAT_KEEPALIVE_INTERVAL);
 
 		isOnline = true;
 		that.emit("online");

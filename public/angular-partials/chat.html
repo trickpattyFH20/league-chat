@@ -115,7 +115,7 @@
             <tab heading="Account" class="{{ isElectron() ? 'electron-padding' : '' }}">
                 <!-- <div class="row spacer">
                     <input type="text" ng-model="formData.addFriend"/>
-                    <button type="button" class="btn btn-info">Add Friend</button>
+                    <button ng-click="addFriend()" type="button" class="btn btn-info">Add Friend</button>
                 </div> -->
                 <div class="row spacer">
                     <button type="button" ng-click="logout()" class="btn btn-danger">Logout</button>
@@ -134,7 +134,7 @@
                                 <a ng-click="showSide()">
                                     <span ng-click="showList()" class="glyphicon glyphicon-triangle-left pull-left" aria-hidden="true"></span>
                                 </a>
-                                <h3 class="panel-title">Chat With {{messages.name}}
+                                <h3 class="panel-title">Chat With {{currentMessages.name}}
                                     <i class="fa fa-circle {{currentMessages.statusColor}}"></i>
                                     ({{currentMessages.statusObj.currentGame.status.name}})</h3>
                             </div>

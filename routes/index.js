@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/addfriend', function(req, res, next) {
-    var apiPath = '/api/lol/na/v1.4/summoner/by-name/'+ req.body.summonerName +'?api_key=60c646ae-34ae-44d6-9f38-1dc7f7f22dd5'
+    var apiPath = '/api/lol/na/v1.4/summoner/by-name/'+ encodeURI(req.body.summonerName) +'?api_key=60c646ae-34ae-44d6-9f38-1dc7f7f22dd5'
     var options = {
         host: 'na.api.pvp.net',
         path: apiPath,

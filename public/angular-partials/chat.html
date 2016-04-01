@@ -113,10 +113,14 @@
                 </ul>
             </tab>
             <tab heading="Account" class="{{ isElectron() ? 'electron-padding' : '' }}">
-                <!-- <div class="row spacer">
+                <div class="row spacer">
                     <input type="text" ng-model="formData.addFriend"/>
                     <button ng-click="addFriend()" type="button" class="btn btn-info">Add Friend</button>
-                </div> -->
+                </div>
+                <div class="row spacer">
+                    <input type="text" ng-model="formData.removeFriend"/>
+                    <button ng-click="removeFriend()" type="button" class="btn btn-warning">Remove Friend</button>
+                </div>
                 <div class="row spacer">
                     <button type="button" ng-click="logout()" class="btn btn-danger">Logout</button>
                 </div>

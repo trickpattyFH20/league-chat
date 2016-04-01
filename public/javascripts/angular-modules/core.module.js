@@ -350,10 +350,31 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             url:'/service/addfriend',
             data:{ 'summonerName': $scope.formData.addFriend }
         }).then(function(res){
-            console.log(res)
+            if(res.data[0][1]['status']){
+                alert('summoner not found...')
+            }else if(res.data[0][1]){
+                angular.forEach(res.data[0][1], function(v, k){
+                    if(res.data[0][1][k]['id']){
+                        $scope.socket.emit('addFriend', {
+                            'jid':'sum'+res.data[0][1][k]['id']+'@pvp.net'
+                        });
+                        alert('friend request sent!')
+                    }
+                })
+            }
         }, function(res){
             console.log(res)
         })
+    }
+
+    $scope.removeFriend = function(){
+        for(var i=0;i<friendList.online.length;i++){
+            if($scope.formData.removeFriend == friendList.online[i].name){
+                $scope.socket.emit('removeFriend', {
+                    'jid':friendList.online[i].jid
+                });
+            }
+        }
     }
 
     $scope.logout = function(){

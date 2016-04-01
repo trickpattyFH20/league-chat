@@ -230,6 +230,12 @@ io.sockets.on('connection', function (socket) {
   socket.on('sendMessage', function(data){
     client.sendMessage(data.jid, data.message)
   })
+  socket.on('addFriend', function(data){
+    client.addFriend(data.jid)
+  })
+  socket.on('removeFriend', function(data){
+    client.removeFriend(data.jid)
+  })
   socket.on('error', function(msg){
     console.log('error handler', msg)
   })

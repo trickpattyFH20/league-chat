@@ -1,3 +1,4 @@
 *.pem
 connect
 *.log
+node_modules/

@@ -392,7 +392,17 @@ body {
 .purple {
   color: #9954bb;
 }
+.twit{
+    color:#55acee;
+}
+.white{
+    color:#fff;
+}
 .mobile{
     font-size:30px!important;
     vertical-align: middle;
+}
+.about-wrapper a{
+    color:#0092ff;
+    text-decoration: underline;
 }

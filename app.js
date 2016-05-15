@@ -164,7 +164,7 @@ var io = require('socket.io').listen(server);
 var Client = require("server-lol-chat"),
     fs = require("fs"),
     should = require("should"),
-    parseStatus = require("./node_modules/server-lol-chat/core/status")
+    parseStatus = require("./node_modules/server-lol-chat/src/status")
 
 io.sockets.on('connection', function (socket) {
   var client;

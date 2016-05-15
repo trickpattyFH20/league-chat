@@ -1,9 +1,9 @@
 #League Chat [http://league.chat](http://league.chat)
 ##### a stand-alone implementation of the League of Legends chat client for browsers and desktop.
 ###### (for a better look at the server side implemenation checkout my other repo [server-lol-chat](https://github.com/trickpattyFH20/server-lol-chat))
-<img src="http://league.chat/images/screenshots/login.png" width="400" />
+<img src="http://league.chat/images/screenshots/login.png" width="500" />
 
-#### basic instructions for setting up local project:
+#### Instructions for setting up local project:
 
 1. `$ git clone https://github.com/trickpattyFH20/league-chat.git`  
 2. `$ cd league-chat`  

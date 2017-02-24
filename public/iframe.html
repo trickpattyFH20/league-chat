@@ -162,10 +162,14 @@
     <script>
 
         function resizeFrame() {
+            // emit event to window parent on wildcard domain
             window.parent.postMessage(document.getElementsByTagName('html')[0].scrollHeight, '*');
         }
 
+        // init resize listener
         window.addEventListener('resize', resizeFrame);
+
+        // init DOMContentLoaded listener
         document.addEventListener("DOMContentLoaded", resizeFrame);
 
     </script>

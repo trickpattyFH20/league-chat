@@ -1,4 +1,4 @@
-#League Chat [http://league.chat](http://league.chat)
+# League Chat [http://league.chat](http://league.chat)
 ##### a stand-alone implementation of the League of Legends chat client for browsers and desktop.
 ###### (repo for the backend is located at [server-lol-chat](https://github.com/trickpattyFH20/server-lol-chat))
 <img src="http://league.chat/images/screenshots/login.png" width="500" />

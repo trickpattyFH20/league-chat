@@ -31,22 +31,17 @@ app.factory('socketService', function($http){
     var svc = {}
     svc.env = {'path': undefined},
     svc.creds = {},
-    svc.getEnv = function(){
+    svc.getEnv = function() {
         return $http({
             method: 'GET',
             url: '/service/devservice',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
         })
-            .success(function (data) {
-                //console.log('success')
-            })
-            .error(function (data) {
-                //console.log(data)
-                console.log('error');
-            });
+        .error(function (data) {
+            console.log('error');
+        });
     },
-    svc.connection = function(env){
-        //console.log(env)
+    svc.connection = function(env) {
         if(env == 'osx'){
             console.log('dev config', env)
             return io.connect('http://localhost:8080',{'forceNew': true});
@@ -54,12 +49,10 @@ app.factory('socketService', function($http){
             console.log('dev config', env)
             return io.connect("127.0.0.1:8080", {'forceNew': true});
         }else{
-            //console.log('live config', env)
             return io.connect("54.200.145.197:8080", {'forceNew': true});
         }
-        //console.log(this.getEnv().success(function(data){return data}))
     },
-    svc.currentConnection = function(){
+    svc.currentConnection = function() {
         return svc.connection;
     }
     return svc;
@@ -68,7 +61,7 @@ app.factory('socketService', function($http){
 app.factory('friendList', function(){
     var svc = {};
     svc.list = [];
-    svc.shortIds = function(){
+    svc.shortIds = function() {
         for(var i=0;i < svc.list.length;i++){
             jidEnd = svc.list[i].jid.indexOf('@')
             svc.list[i].shortId = svc.list[i].jid.slice(3, jidEnd)
@@ -79,7 +72,7 @@ app.factory('friendList', function(){
     svc.newPresence = function(friend) {
         var jidEnd = friend.jid.indexOf('@')
         friend.shortId = friend.jid.slice(3, jidEnd)
-        if(!friend.messages){
+        if (!friend.messages) {
             friend.messages = [];
         }
         friend.unread = 0;
@@ -88,12 +81,11 @@ app.factory('friendList', function(){
         // (presence changes for away / status updates / in game upadates)
         var foundOffline = {'presence':false, 'idx':undefined};
         var foundOnline= {'presence':false, 'idx':undefined};
-        //is friend in offline list?
-        for(var i=0;i<svc.list.length;i++) {
+        //is friend in offline list
+        for (var i=0;i<svc.list.length;i++) {
             if (friend.shortId == svc.list[i].shortId) {
                 foundOffline.presence = true;
                 foundOffline.idx = i
-                //found offline
             }
         }
         //is friend in online list?
@@ -101,77 +93,43 @@ app.factory('friendList', function(){
             if (friend.shortId == svc.online[j].shortId) {
                 foundOnline.presence = true;
                 foundOnline.idx = j;
-                //found online
             }
         }
-        if(friend.online == true){
+        if (friend.online == true) {
         //if new friend is online
-            if(foundOffline.presence == true){
+            if (foundOffline.presence == true) {
                 //if friend is in total list, remove it and push to online
                 if(svc.list[foundOffline.idx].messages){
                     friend.messages = angular.copy(svc.list[foundOffline.idx].messages)
                 }
                 svc.list.splice(foundOffline.idx, 1)
             }
-            if(foundOnline.presence){
+            if (foundOnline.presence) {
                 var cacheMsgs = svc.online[foundOnline.idx].messages
                 friend.messages = cacheMsgs;
                 var cacheUnread = svc.online[foundOnline.idx].unread
                 friend.unread = cacheUnread;
 
                 svc.online[foundOnline.idx] = friend
-            }else{
+            } else {
                 svc.online.push(friend)
             }
-        }else if(friend.online == false){
-        //if new friend is offline
-            if(foundOffline.presence){
+        } else if (friend.online == false) {
+        // if new friend is offline
+            if (foundOffline.presence) {
                 svc.list[foundOffline.idx] = friend
-                //break;
-            }else{
+            } else {
                 svc.list.push(svc.online[foundOnline.idx])
-                //break;
             }
-            if(foundOnline.presence){
+
+            if (foundOnline.presence) {
                 svc.online.splice(foundOnline.idx, 1)
             }
         }
-
-        /*switch(friend.online) {
-            case true:
-                var found = false;
-                //if already in list, don't add to online
-                // (presence changes for away / status updates / in game upadates)
-                for(var i=0;i<svc.online.length;i++){
-                    if(friend.name == svc.online[i].name){
-                        found = true;
-                        break;
-                    }
-                }
-                //if they aren't in the online list, add them
-                if(found == false){
-                    friend.messages = [];
-                    friend.unread = 0;
-                    jidEnd = friend.jid.indexOf('@')
-                    shortId = friend.jid.slice(3, jidEnd)
-                    friend.shortId = shortId
-                    svc.online.push(friend);
-                }
-                break;
-            case false:
-                for(var i=0;i<svc.online.length;i++){
-                    if(friend.name == svc.online[i].name){
-                        svc.online.splice(i, 1)
-                    }
-                }
-                break;
-            default:twit
-            console.log('unrecognized presence')
-        }*/
     };
     svc.newMessage = function(newMsg, isCurrent) {
-        if(newMsg.from == 'self'){
-            for(var i=0;i<svc.online.length;i++){
+        if (newMsg.from == 'self') {
+            for (var i=0;i<svc.online.length;i++) {
                 thisJid = svc.online[i].shortId
                 if(newMsg.to == thisJid){
                     svc.online[i].messages.push(newMsg)
@@ -182,9 +140,9 @@ app.factory('friendList', function(){
             var idEnd = newMsg.from.indexOf('@')
             var thisId = newMsg.from.slice(3, idEnd);
             //TODO use shortId
-            for(var i=0;i<svc.online.length;i++){
+            for (var i=0;i<svc.online.length;i++) {
                 thisJid = svc.online[i].shortId
-                if(thisId == thisJid){
+                if (thisId == thisJid) {
                     svc.online[i].messages.push(newMsg)
                     if(isCurrent == false){
                         svc.online[i].undread = svc.online[i].unread++
@@ -199,7 +157,7 @@ app.factory('friendList', function(){
 })
 
 app.controller('mainCtrl', ['$scope', '$http', 'socketService', function($scope, $http, socketService){
-
+    // TODO
 }]);
 
 app.controller('loginCtrl',
@@ -242,7 +200,6 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
         $scope.socket = socketService.connection(data.env)
         $scope.socket.emit('auth', socketService.creds);
     })
-    //for production pass in param to io("http://weblolchat-weblolchat.rhcloud.com:8000")
 
     $scope.onlineFriends = [];
 
@@ -251,20 +208,17 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             console.log('socket is set')
             $scope.socket.on('online', function () {
                 $scope.$apply()
-            })
-            $scope.socket.on('stanza', function (stanza) {
-                //console.log(stanza)
-            })
+            });
+            
             $scope.socket.on('roster', function (list) {
                 friendList.list = list
                 friendList.shortIds();
                 $scope.offlineFriends = friendList.list
                 $scope.$apply()
-            })
+            });
+            
             $scope.socket.on('updatefriend', function (friend) {
-                console.log('updatefriend :', friend)
-                //TODO remove timeout and rework:
-                if(friend.online == false && $scope.currentMessages){
+                if (friend.online == false && $scope.currentMessages) {
                     //TODO make this work with short id
                     if($scope.currentMessages.jid == friend.jid){
                         $scope.currentMessages = undefined;
@@ -276,11 +230,12 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
                 $scope.onlineFriends = friendList.online
                 $scope.$apply()
 
-            })
+            });
+            
             $scope.socket.on('message', function (message) {
                 //TODO do this to message counter : http://stackoverflow.com/questions/275931/how-do-you-make-an-element-flash-in-jquery
                 var isCurrent = false;
-                if($scope.currentMessages){
+                if ($scope.currentMessages) {
                     var idEnd = message.from.indexOf('@')
                     var thisId = message.from.slice(3, idEnd);
                     if($scope.currentMessages.shortId == thisId){
@@ -289,7 +244,8 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
                 }
                 friendList.newMessage(message, isCurrent);
                 $scope.$apply()
-            })
+            });
+            
             $scope.socket.on('clienterror', function (msg) {
                 console.log('caught it')
                 console.log(msg)
@@ -303,11 +259,11 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
                     $state.go('home')
                 });
                 $scope.$apply()
-            })
+            });
         }
     })
 
-    $scope.$on("$stateChangeStart",   function(evt, to, toP, from, fromP){
+    $scope.$on("$stateChangeStart", function(evt, to, toP, from, fromP) {
         $scope.socket.emit('forceDisconnect')
         socketService.creds = {};
         friendList.online = [];
@@ -317,16 +273,16 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     //old ctrl
     $scope.showMessages = function(shortId){
         $scope.showMsg = true
-        for(var i=0;i<friendList.online.length;i++){
-            if(shortId == friendList.online[i].shortId){
+        for (var i=0;i<friendList.online.length;i++) {
+            if (shortId == friendList.online[i].shortId) {
                 friendList.online[i].unread = 0;
                 $scope.currentMessages = friendList.online[i]
                 console.log(friendList.online[i])
             }
         }
     }
+    
     $scope.sendNew = function(){
-        //console.log('send new function')
         $scope.socket.emit('sendMessage', {'jid':$scope.currentMessages.jid, 'message':$scope.formData.message});
         friendList.newMessage(
             {
@@ -338,6 +294,7 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             undefined);
         $scope.formData.message = '';
     }
+    
     $scope.showSide = function(){
         $scope.currentMessages = undefined;
         $scope.showMsg = false;
@@ -349,10 +306,11 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
             method:'POST',
             url:'/service/addfriend',
             data:{ 'summonerName': $scope.formData.addFriend }
-        }).then(function(res){
-            if(res.data[0][1]['status']){
+        })
+        .then(function(res){
+            if (res.data[0][1]['status']) {
                 alert('summoner not found...')
-            }else if(res.data[0][1]){
+            } else if (res.data[0][1]){
                 angular.forEach(res.data[0][1], function(v, k){
                     if(res.data[0][1][k]['id']){
                         $scope.socket.emit('addFriend', {
@@ -368,8 +326,8 @@ app.controller('chatCtrl', ['$scope', '$state', '$http', 'socketService', 'frien
     }
 
     $scope.removeFriend = function(){
-        for(var i=0;i<friendList.online.length;i++){
-            if($scope.formData.removeFriend == friendList.online[i].name){
+        for (var i=0;i<friendList.online.length;i++) {
+            if ($scope.formData.removeFriend == friendList.online[i].name) {
                 $scope.socket.emit('removeFriend', {
                     'jid':friendList.online[i].jid
                 });
@@ -392,9 +350,9 @@ app.controller('aboutCtrl', ['$scope', '$state', '$http', 'socketService', funct
 app.directive('ngEnter', function () {
     return function (scope, element, attrs) {
         element.bind("keydown keypress", function (event) {
-            if(event.which === 13) {
+            if (event.which === 13) {
                 event.preventDefault();
-                if(element[0]['value'] && element[0]['value']){
+                if (element[0]['value'] && element[0]['value']) {
                     scope.$apply(function (){
                         scope.$eval(attrs.ngEnter);
                     });
@@ -438,11 +396,11 @@ app.directive('resize', function ($window) {
 app.filter('onlineColorFilter', function(){
     return function(input, color){
         var out = [];
-        for(var i=0;i<input.length;i++){
-            if(input[i].statusColor){
-                if(input[i].statusColor == color){
-                        out.push(input[i])
-                    }
+        for (var i=0;i<input.length;i++) {
+            if (input[i].statusColor) {
+                if (input[i].statusColor == color) {
+                    out.push(input[i])
+                }
             }
         }
         return out;

@@ -7,7 +7,8 @@
 
 1. `$ git clone https://github.com/trickpattyFH20/league-chat.git`  
 2. `$ cd league-chat`  
-3. `$ npm install`  
+3. `$ npm install`
+4. `$ npm i -g forever`
 
 ##### OSX
 `$ ./start` (starts local server, navigate to http://127.0.0.1:8080 in your browser)    

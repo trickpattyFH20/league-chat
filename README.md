@@ -17,3 +17,8 @@
 ##### Windows
 `$ forever start -a bin/www` (starts local server, navigate to http://127.0.0.1:8080 in your browser)  
 `$ forever stop bin/www` (stops local server)  
+
+##### Create LoL account
+If you don't have a LoL account, you can create on here:
+https://leagueoflegends.com
+Download the game and play a couple. Send me a friend request and I'll join you! (summoner name: trickpatty)

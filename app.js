@@ -13,8 +13,6 @@ var login = require('./routes/login');
 var app = express();
 
 // view engine setup
-// oh no... it crashed
-// FORCE PUSHHHH
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

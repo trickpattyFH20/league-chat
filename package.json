@@ -15,7 +15,7 @@
     "longjohn": "^0.2.7",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "server-lol-chat": "git+https://patricktlawler@bitbucket.org/patricktlawler/serverlolchat.git",
+    "server-lol-chat": "git+https://github.com/trickpattyFH20/league-chat.git",
     "socket.io": "^1.3.5"
   },
   "devDependencies": {

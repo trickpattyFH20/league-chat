@@ -12,6 +12,7 @@
     "debug": "~2.2.0",
     "ejs": "^2.3.3",
     "express": "~4.13.0",
+    "forever": "^0.15.3",
     "longjohn": "^0.2.7",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
